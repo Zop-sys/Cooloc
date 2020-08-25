@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+    resources :teams, only: [:create]
+
+    resources :chores, only: [:index, :show]
+
+  resources :tasks, only: [:index, :create]
+
+  namespace :team do
+    resources :chores [:index]
+  end
 end
