@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   resources :tasks, only: [:index, :create]
 
   namespace :team do
-    resources :chores [:index]
+    resources :chores, only: [:index]
   end
 end
