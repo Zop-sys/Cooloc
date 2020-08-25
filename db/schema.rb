@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_25_093552) do
+ActiveRecord::Schema.define(version: 2020_08_25_134201) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,15 @@ ActiveRecord::Schema.define(version: 2020_08_25_093552) do
     t.string "frequency"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "team_tasks", force: :cascade do |t|
+    t.bigint "team_id", null: false
+    t.bigint "task_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["task_id"], name: "index_team_tasks_on_task_id"
+    t.index ["team_id"], name: "index_team_tasks_on_team_id"
   end
 
   create_table "teams", force: :cascade do |t|
@@ -57,5 +66,7 @@ ActiveRecord::Schema.define(version: 2020_08_25_093552) do
 
   add_foreign_key "chores", "tasks"
   add_foreign_key "chores", "users"
+  add_foreign_key "team_tasks", "tasks"
+  add_foreign_key "team_tasks", "teams"
   add_foreign_key "users", "teams"
 end

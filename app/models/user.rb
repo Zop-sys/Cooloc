@@ -5,8 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   belongs_to :team
-  validates :pseudo, presence:true, uniqueness:true
-  
-
+  validates :pseudo, uniqueness: true
 end
-
