@@ -83,3 +83,7 @@ production:
   database: Cooloc_production
   username: Cooloc
   password: <%= ENV['COOLOC_DATABASE_PASSWORD'] %>
+
+  production:
+  <<: *default
+  url: <%= ENV['POSTGRESQL_ADDON_URI'] %>

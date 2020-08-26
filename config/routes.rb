@@ -1,5 +1,22 @@
 Rails.application.routes.draw do
-  devise_for :users
   root to: 'pages#home'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  devise_for :users
+
+  # embeds invitation of roommates via devise invitable
+  resources :teams, only: [:new, :create]
+
+  resources :chores, only: [:index] do
+    member do
+      patch :mark_as_done
+    end
+  end
+
+  # create is a bulk create (receives an array of taks IDs)
+  resources :team_tasks, only: [:new, :create]
+
+  namespace :team do
+    # might not be needed, might be implemented in /chores
+    resources :chores, only: [:index]
+  end
 end

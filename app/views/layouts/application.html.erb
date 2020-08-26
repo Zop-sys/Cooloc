@@ -12,9 +12,25 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
 
-    <%= yield %>
+      <%= render 'shared/navbar' %>
+      <%= render 'shared/flashes' %>
+
+    <div class="container mt-5">
+
+     <%= yield %>
+
+    </div>
+  <div class="footer">
+      <div class="footer-links p-2">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+    </div>
+      <div class="footer-copyright">
+        un projet de Cooloc
+      </div>
+  </div>
+
   </body>
 </html>
