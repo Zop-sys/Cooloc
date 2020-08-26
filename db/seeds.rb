@@ -10,6 +10,8 @@ require "open-uri"
 
 puts "Cleaning database..."
 Task.destroy_all
+Team.destroy_all
+User.destroy_all
 
 puts "Creating tasks.."
 
@@ -63,4 +65,21 @@ animaux = Task.create!(title:"S'occuper des animaux", intensity: 2, room: "Autre
 
 puts "Tasks autres pièces creation finished!"
 
-puts "All tasks finished"
+puts "All tasks created"
+
+puts "Creatings teams ..."
+
+
+# teams
+
+team = Team.create!(name: "Happy Team")
+puts "Created #{team.name}"
+
+team = Team.create!(name: "Les coolocs créatifs !")
+puts "Created #{team.name}"
+
+puts "All teams created"
+
+# users
+
+
