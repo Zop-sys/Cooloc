@@ -2,9 +2,11 @@ class Chore < ApplicationRecord
   belongs_to :user
   belongs_to :task
 
-  # after_initialize :done_value
+  validates :done, acceptance: { accept: [ "A faire", "Fait", "Non fait"] }
 
-  # def done_value
-  #   self.done = false
-  # end
+  after_initialize :done_value
+
+  def done_value
+    self.done = "A faire"
+  end
 end
