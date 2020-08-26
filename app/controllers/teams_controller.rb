@@ -4,15 +4,19 @@ class TeamsController < ApplicationController
   end
 
   def create
-    @team = Painting.new(team_params)
-
-      #attendre Mélanie pour l'envoie de mail
+    @team = Team.new(team_param)
 
     if @team.save
-      redirect_to @new_team_task, notice: 'Ta coloc a bien été crée ! '
-    else
-      render :new
+      current_user.update(team: @team)
+
+      params[:roomate_emails].each do |roomate_email|
+        next if roomate_email.blank?
+
+        User.invite!(email: roomate_email, team: @team)
+      end
     end
+
+    redirect_to new_team_task_path
   end
 
   private

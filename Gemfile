@@ -5,6 +5,7 @@ ruby '2.6.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
+gem 'rails-i18n'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
@@ -30,6 +31,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'bootstrap', '~> 4.5.2'
 gem 'devise'
 gem 'devise_invitable', '~> 2.0.0'
+gem 'devise-i18n'
 
 
 gem 'autoprefixer-rails'

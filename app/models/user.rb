@@ -5,11 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   belongs_to :team
-  validates :pseudo, uniqueness: true
+  validates :pseudo, uniqueness: true, allow_nil: true
 
-  after_initialize :team_value
-
-  def team_value
-    self.team = nil
-  end
 end
