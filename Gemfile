@@ -33,6 +33,7 @@ gem 'devise'
 gem 'devise_invitable', '~> 2.0.0'
 gem 'devise-i18n'
 
+gem 'letter_opener', group: :development
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
@@ -64,5 +65,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-
