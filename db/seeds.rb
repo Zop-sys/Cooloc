@@ -82,4 +82,19 @@ puts "All teams created"
 
 # users
 
+user = User.new(pseudo: "Léa", email:"lea@mail.com", password: "password")
+user.team = Team.where(name: "Les coolocs créatifs !").first
+user.save!
+puts "Created #{user.pseudo}"
 
+user = User.new(pseudo: "Léo", email:"leo@mail.com", password: "password")
+user.team = Team.where(name: "Les coolocs créatifs !").first
+user.save!
+puts "Created #{user.pseudo}"
+
+user = User.new(pseudo: "Ava", email:"ava@mail.com", password: "password")
+user.team = Team.where(name: "Les coolocs créatifs !").first
+user.save!
+puts "Created #{user.pseudo}"
+
+puts "All users created"
