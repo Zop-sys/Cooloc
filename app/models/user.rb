@@ -6,4 +6,10 @@ class User < ApplicationRecord
 
   belongs_to :team
   validates :pseudo, uniqueness: true
+
+  after_initialize :team_value
+
+  def team_value
+    self.team = nil
+  end
 end
