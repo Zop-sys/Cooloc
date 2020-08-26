@@ -29,6 +29,8 @@ gem 'redis', '~> 4.0'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'bootstrap', '~> 4.5.2'
 gem 'devise'
+gem 'devise_invitable', '~> 2.0.0'
+
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
