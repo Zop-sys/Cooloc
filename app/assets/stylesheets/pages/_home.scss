@@ -1,12 +1,25 @@
 // Specific CSS for your home-page
-h1 {
-  font-family: $title-font;
+.main-btn {
+margin-top: 20px;
 }
 
-h4 {
-  font-family: $body-font;
+.container-bottom-hero {
+  position:absolute;
+  margin:0%;
+  padding: 0%;
+  height:50%;
+  width: 100%;
+  background-color: #888888;
 }
 
-p {
-  font-family: $regular-font;
+.text-hero-banner {
+    display:flex;
+    justify-content: end;
+  p {
+    font-size:17px;
+    font-family: $general-font;
+    text-align:justify;
+    max-width:20em;
+    margin: 30px 10px;
+  }
 }
