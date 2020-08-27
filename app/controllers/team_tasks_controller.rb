@@ -1,12 +1,13 @@
 class TeamTasksController < ApplicationController
   def new
     @team_task = TeamTask.new
+    @tasks = Task.all
   end
 
   def create
     @team = current_user.team
     @team.task_ids = team_param
-    if @team.save
+    if @team.save!
       redirect_to chores_path, notice: 'Tes tâches sont bien enregistrées ! '
     else
       render :new
