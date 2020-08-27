@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div>
       <% unless current_page?(root_path) %>
-      <%= link_to "#", class: "navbar-brand" do %>
+      <%= link_to root_path, class: "navbar-brand" do %>
         <%= image_tag "log.png" %>
         <% end %>
       <% end %>
