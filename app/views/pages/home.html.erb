@@ -1,9 +1,22 @@
-<h1>Pages#home</h1>
-<h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vulputate, quam id mattis consequat, velit tellus maximus est, vel condimentum nisi mauris sed nunc. Sed quis bibendum nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin pellentesque dictum diam ut auctor. Vivamus eu imperdiet metus. Nullam cursus in ipsum at tincidunt. Phasellus pharetra ut augue non fringilla. Mauris nec lobortis purus. In faucibus viverra enim varius condimentum. Duis diam quam, semper sed ante quis, tempus congue nulla. Vestibulum non auctor ipsum, sed luctus est. Etiam vestibulum libero eros, at gravida dolor imperdiet vel. </h4>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vulputate, quam id mattis consequat, velit tellus maximus est, vel condimentum nisi mauris sed nunc. Sed quis bibendum nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin pellentesque dictum diam ut auctor. Vivamus eu imperdiet metus. Nullam cursus in ipsum at tincidunt. Phasellus pharetra ut augue non fringilla. Mauris nec lobortis purus. In faucibus viverra enim varius condimentum. Duis diam quam, semper sed ante quis, tempus congue nulla. Vestibulum non auctor ipsum, sed luctus est. Etiam vestibulum libero eros, at gravida dolor imperdiet vel. </p>
-
-  <div class="container">
-    <button class="btn-start">
-      <span> Démarrer l'aventure </span>
-    </button>
+<div class="container">
+  <%= image_tag "ceiling-lamp.png", class: "img-lamp-top" %>
+  <%= image_tag "bookshelf.png", class: "img-book-top" %>
 </div>
+
+
+<div class="banner-container pt-3 d-flex flex-column align-items-center justify-content-center">
+  <%= image_tag "sofa-banner.png", class: "img-banner-hero" %>
+  <%= link_to "Commencez!", new_user_session_path, class: "button btn-start main-btn" %>
+</div>
+
+<div class="container d-flex justify-content-between align-items-center p-0">
+  <div class="img-panda">
+  <%= image_tag "panda.png", class: "img-panda-bottom-hero mt-5" %>
+  </div>
+  <div class="text-hero-banner mt-2">
+    <p> " Marre de te prendre la tête avec tes colocs?
+    Fais comme les pandas reste zen,
+    Tu t’occupes du bon côté de la coloc, et nous du mauvais! "" </p>
+  </div>
+</div>
+
