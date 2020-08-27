@@ -1,0 +1,18 @@
+.title {
+  font-family: $title-font;
+  text-align: center;
+  position: relative;
+  bottom: 25px;
+  margin-bottom: 0px;
+  color: $purple;
+  font-size: 36px;
+}
+
+
+.devise_new{
+  font-family: $general-font;
+  input{
+    background-color: $yellow_input;
+    border-radius: 10px;
+  }
+}
