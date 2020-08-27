@@ -1,29 +1,23 @@
+<div class = "pr-2 pl-2 ">
 
-  <div class= "d-flex justify-content-center mb-3">
-    <%= image_tag "mug.png", height:60 %>
-    <h1 class="titleteam pr-4 pl-4 pb-4"> Bienvenue dans ta coloc !</h1>
-  </div>
+  <h1 class="titleteam pr-4 pl-4 pb-4"> Bienvenue dans ta coloc !</h1>
 
   <%= simple_form_for(@team) do |f| %>
     <%= f.error_notification %>
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
-
+  </div>
     <div class="formteam">
-      <div class=" devise_new"><%= f.input :name, label: 'Entre le nom de ton appartement', placeholder: "La ménagerie"%></div>
-    </div>
+      <%= f.input :name, label: 'Entre le nom de ton appartement', placeholder: "La ménagerie"%>
 
     <div class="formteam">
       <%= label_tag :roomates_emails, "Donne nous les mails de tes colocs" %>
-      <div class="d-flex justify-content-start">
-        <div class="inputteam devise_new"><%= text_field_tag "roomate_emails[]" %></div>
-        <%= f.button :submit, " # ", class: "btn-add" %>
-      </div>
+      <div class="inputteam"><%= text_field_tag "roomate_emails[]",%></div>
     </div>
 
-    <div class="container d-flex align-items-end justify-content-around position-fixed fixed-bottom mb-5 pb-4">
-      <%= image_tag "lamp.png", height: 70 %>
-      <%= f.button :submit, "Ajoute ta coloc", class: "button btn-validate" %>
+    <div class="button mt-5">
+      <%= f.button :submit, "Ajoute ta coloc"%>
     </div>
   <% end %>
 
+  </div>
+</div>
