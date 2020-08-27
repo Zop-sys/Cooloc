@@ -1,20 +1,23 @@
-<h1> Parle nous de ta coloc ! </h1>
+<div class = "pr-2 pl-2 ">
 
-<%= simple_form_for(@team) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+  <h1 class="titleteam pr-4 pl-4 pb-4"> Bienvenue dans ta coloc !</h1>
 
-  <div>
-    <%= f.input :name, label: 'Entre le nom de ton appartement', placeholder: "La ménagerie"%>
+  <%= simple_form_for(@team) do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
   </div>
+    <div class="formteam">
+      <%= f.input :name, label: 'Entre le nom de ton appartement', placeholder: "La ménagerie"%>
 
-  <div>
-    <%= label_tag :roomates_emails, "Donne nous les mails de tes colocs" %>
-    <%= text_field_tag "roomate_emails[]" %>
-    <%= text_field_tag "roomate_emails[]" %>
-  </div>
+    <div class="formteam">
+      <%= label_tag :roomates_emails, "Donne nous les mails de tes colocs" %>
+      <div class="inputteam"><%= text_field_tag "roomate_emails[]" %></div>
+    </div>
 
-  <div>
-    <%= f.button :submit, "Ajoute ta coloc"%>
+    <div class="button mt-5">
+      <%= f.button :submit, "Ajoute ta coloc"%>
+    </div>
+  <% end %>
+
   </div>
-<% end %>
+</div>
