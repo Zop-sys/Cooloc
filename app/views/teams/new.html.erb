@@ -2,6 +2,7 @@
     <%= image_tag "mug.png", height:60 %>
     <h1 class="titleteam pr-4 pl-4 pb-4"> Bienvenue dans ta coloc !</h1>
   </div>
+
   <%= simple_form_for(@team) do |f| %>
     <%= f.error_notification %>
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>

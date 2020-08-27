@@ -98,3 +98,55 @@ user.save!
 puts "Created #{user.pseudo}"
 
 puts "All users created"
+
+
+#chores
+
+chore = Chore.new
+chore.user = User.where(pseudo: 'Ava').first
+chore.task = Task.where(title: "S'occuper de la maintenance générale").first
+chore.save!
+puts "Created "
+
+chore = Chore.new
+chore.user = User.where(pseudo: 'Ava').first
+chore.task = Task.where(title: "Balayer/Laver la terasse").first
+chore.save!
+puts "Created "
+
+chore = Chore.new
+chore.user = User.where(pseudo: 'Ava').first
+chore.task = Task.where(title: "Passer la serplière").first
+chore.save!
+puts "Created "
+
+chore = Chore.new
+chore.user = User.where(pseudo: 'Ava').first
+chore.task = Task.where(title: "Laver la table, faire les poussières").first
+chore.save!
+puts "Created "
+
+chore = Chore.new
+chore.user = User.where(pseudo: 'Ava').first
+chore.task = Task.where(title: "S'occuper des animaux").first
+chore.save!
+puts "Created "
+
+chore = Chore.new
+chore.user = User.where(pseudo: 'Léo').first
+chore.task = Task.where(title: "S'occuper des animaux").first
+chore.save!
+puts "Created "
+
+chore = Chore.new
+chore.user = User.where(pseudo: 'Léo').first
+chore.task = Task.where(title: "Laver la table, faire les poussières").first
+chore.save!
+puts "Created "
+
+
+
+
+
+
+
