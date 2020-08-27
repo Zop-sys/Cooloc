@@ -10,8 +10,8 @@ require "open-uri"
 
 puts "Cleaning database..."
 Task.destroy_all
-Team.destroy_all
 User.destroy_all
+Team.destroy_all
 
 puts "Creating tasks.."
 
