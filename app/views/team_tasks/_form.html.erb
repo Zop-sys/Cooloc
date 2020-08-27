@@ -20,10 +20,10 @@
       </div>
   </div>
   <div class = "row">
-      <div class = "card",  onclick="flip()">
+      <div class = "card col-6",  onclick="flip()">
         <%= f.collection_check_boxes :task_id, Task.all.where(room: "Cuisine"), :id, :title  %>
       </div>
-      <div class = "card",  onclick="flip()">
+      <div class = "card col-6",  onclick="flip()">
         <%= f.collection_check_boxes :task_id, Task.all.where(room: "Exterieur"), :id, :title  %>
       </div>
   </div>
