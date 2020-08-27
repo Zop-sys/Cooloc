@@ -101,6 +101,17 @@
   }
 }
 
+
+// ------- bouton secondaire ------- //
+
+.btn-second {
+  font-family: $general-font;
+  background-color: $grey-light;
+  border-radius: 10px;
+}
+
+
+
 // -------- comportement des boutons --------
 
 @keyframes rotate {
