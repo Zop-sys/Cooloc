@@ -31,4 +31,7 @@ import {flip} from '../channels/_form'
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+    flip();
 });
+
+
