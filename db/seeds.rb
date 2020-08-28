@@ -9,6 +9,7 @@
 require "open-uri"
 
 puts "Cleaning database..."
+Chore.destroy_all
 Task.destroy_all
 User.destroy_all
 Team.destroy_all
@@ -143,10 +144,3 @@ chore.user = User.where(pseudo: 'Léo').first
 chore.task = Task.where(title: "Laver la table, faire les poussières").first
 chore.save!
 puts "Created "
-
-
-
-
-
-
-
