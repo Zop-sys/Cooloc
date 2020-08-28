@@ -1,4 +1,4 @@
-function flip() {
+const = flip = () =>  {
     GetElementById("Salon").toggleClass('flipped');
 }
 
