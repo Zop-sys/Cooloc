@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :invitable, :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  belongs_to :team
+   belongs_to :team, optional: true
   validates :pseudo, uniqueness: true, allow_nil: true
 
 end
