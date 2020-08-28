@@ -2,7 +2,7 @@
 // Image de la lampe en haut de la Homepage //
 
 .img-lamp-top {
-  height: 120px;
+  height: 100px;
   position: absolute;
   top:0px;
   right: 20%;
@@ -11,7 +11,7 @@
 // Image de l'étagère de livres en haut de la homepage //
 
 .img-book-top {
-  height: 80px;
+  height: 70px;
   // position:absolute;
 }
 
@@ -21,17 +21,27 @@
   height: 120px;
 }
 
+.img-banner-hero {
+  height:180px;
+}
 
 
+// media queries //
+@media(min-width:800px) {
+  .img-book-top {
+    height: 130px;
+  }
+}
 
-
-// Image de la Hero Banner //
-
-// .img-banner-hero {
-//   height: 150px;
-//   width: 250px;
-//   position: absolute;
-//   top:90%;
-//   left:50%;
-//   transform: translate(-50%, -50%);
-// }
+@media(min-width:800px) {
+  .img-lamp-top {
+    height: 130px;
+  }
+  .img-banner-hero {
+    height: 300px;
+    margin-bottom:20px;
+  }
+  .img-panda-bottom-hero {
+    height: 200px;
+  }
+}
