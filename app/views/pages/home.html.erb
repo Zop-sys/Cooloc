@@ -8,11 +8,7 @@
 
 <div class="banner-container d-flex flex-column align-items-center justify-content-center">
   <%= image_tag "sofa-banner.png", class: "img-banner-hero mt-5" %>
-  <% if user_signed_in? %>
-    <%= link_to "Commencez!", new_team_path, class: "button btn-start main-btn" %>
-  <% else%>
-    <%= link_to "Commencez!", new_user_session_path, class: "button btn-start main-btn" %>
-  <% end %>
+ <%= link_to "Commencez!", new_team_path, class: "button btn-start main-btn" %>
 </div>
 
 <div class="container d-flex justify-content-between p-0">
