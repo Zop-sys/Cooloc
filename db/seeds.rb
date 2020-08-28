@@ -9,9 +9,11 @@
 require "open-uri"
 
 puts "Cleaning database..."
+Chore.destroy_all
 Task.destroy_all
-Team.destroy_all
 User.destroy_all
+Team.destroy_all
+
 puts "Creating tasks.."
 
 # tasks cuisine
