@@ -12,6 +12,8 @@ console.log(roomCards);
 const flip = () =>  { roomCards.forEach((roomCard) => {
   roomCard.addEventListener('click', (event) => {
     event.currentTarget.classList.toggle("flipped");
+    event.currentTarget.classList.toggle("hidden");
+    event.currentTarget.classList.toggle("flipped");
   });
 });
 };
