@@ -4,26 +4,31 @@
 
   <div class="form-inputs" >
     <div class = "row">
-      <div class = "card col-6 ", id= "Salon", onclick="flip()">
-        <%= f.collection_check_boxes :task_id, Task.all.where(room: "Salon"), :id, :title  %>
+      <div class = "card col-6 turn" id= "Salon">
+        <div class="front">
+          <%= image_tag "room.png" %>
+        </div>
+        <div class="back">
+          <%= f.collection_check_boxes :task_id, Task.all.where(room: "Salon"), :id, :title  %>
+        </div>
       </div>
-      <div class = "card col-6",  onclick="flip()">
+      <div class = "card col-6 turn">
         <%= f.collection_check_boxes :task_id, Task.all.where(room: "Toilette"), :id, :title  %>
       </div>
   </div>
   <div class = "row">
-      <div class = "card col-6",  onclick="flip()">
+      <div class = "card col-6 turn">
         <%= f.collection_check_boxes :task_id, Task.all.where(room: "Autres"), :id, :title  %>
       </div>
-      <div class = "card col-6",  onclick="flip()">
+      <div class = "card col-6 turn">
         <%= f.collection_check_boxes :task_id, Task.all.where(room: "Salle de Bain"), :id, :title  %>
       </div>
   </div>
   <div class = "row">
-      <div class = "card col-6",  onclick="flip()">
+      <div class = "card col-6 turn">
         <%= f.collection_check_boxes :task_id, Task.all.where(room: "Cuisine"), :id, :title  %>
       </div>
-      <div class = "card col-6",  onclick="flip()">
+      <div class = "card col-6 turn">
         <%= f.collection_check_boxes :task_id, Task.all.where(room: "Exterieur"), :id, :title  %>
       </div>
   </div>
