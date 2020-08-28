@@ -1,22 +1,10 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-      <div class="form-post">
-        <h1>Les tâches à partager avec tes colocs</h1>
-        <%= render 'form', team: @team %>
-        <%= simple_form_for(@team_task) do |f| %>
-        <div class="row">
-          <div class="col-xs-6">
-            <%= f.input :name, placeholder: "How to design a form" %>
-          </div>
-          <div class="col-xs-6">
-            <%= f.input :status, collection: Post::STATUSES, prompt: "Which status" %>
-          </div>
-        </div>
-          <!-- Inject categories here -->
-          <%= f.input :content, placeholder: "In this tutorial..." %>
-          <%= f.submit "Save", class: "btn btn-primary"  %>
-        <% end %>
+
+<div class="container new_team_task">
+  <h1>Les tâches à partager avec tes colocs</h1>
+  <div class="row 3">
+    <div class="cl">
+      <div class="form-post task_check">
+          <%= render 'form', team_task: @team_task %>
       </div>
     </div>
   </div>
