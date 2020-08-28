@@ -15,9 +15,11 @@
 
     <div class="formteam">
       <%= label_tag :roomates_emails, "Donne nous les mails de tes colocs" %>
-      <div class="d-flex justify-content-start">
-        <div class="inputteam devise_new"><%= text_field_tag "roomate_emails[]" %></div>
-        <%= f.button :submit, " # ", class: "btn-add" %>
+      <div id="roomate-emails">
+        <div class="inputteam devise_new mb-2"><%= text_field_tag "roomate_emails[]" %></div>
+      </div>
+      <div class="">
+        <%= f.button :submit, 'ajouter un autre email', class: "btn-add" %>
       </div>
     </div>
 
@@ -26,4 +28,3 @@
       <%= f.button :submit, "Ajoute ta coloc", class: "button btn-validate" %>
     </div>
   <% end %>
-
