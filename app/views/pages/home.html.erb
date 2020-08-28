@@ -6,10 +6,8 @@
 
 <div class="banner-container pt-5 d-flex flex-column align-items-center justify-content-center">
   <%= image_tag "sofa-banner.png", class: "img-banner-hero mt-5" %>
-  <% if truevalue %>
-    <%= link_to "Commencez!", new_user_session_path, class: "button btn-start main-btn" %>
-  <% elsif truevalue %>
-    <%= link_to "Commencez!", new_user_session_path, class: "button btn-start main-btn" %>
+  <% if user_signed_in? %>
+    <%= link_to "Commencez!", new_team_path, class: "button btn-start main-btn" %>
   <% else%>
     <%= link_to "Commencez!", new_user_session_path, class: "button btn-start main-btn" %>
   <% end %>
