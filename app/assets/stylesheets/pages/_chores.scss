@@ -1,0 +1,41 @@
+.banner {
+  background-color: $grey;
+  display: flex;
+  text-align: center;
+  border-radius: 15px;
+  margin-top: 50px;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 100px;
+
+  h1 {
+  // padding-top: 15px;
+  // padding-right: 10px;
+  // padding-left: 25px;
+  font-size: 1000px;
+  font-weight: bold;
+  font-family: $regular-font;
+    }
+  }
+
+.c-banner {
+  background-color: $yellow_input;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 15px;
+  font-size: 30px;
+  font-weight: 20px;
+  margin-bottom: O;
+  width: 300px;
+
+   h1 {
+  font-size: 20px;
+  padding-top: 20px;
+    }
+  }
+
+
