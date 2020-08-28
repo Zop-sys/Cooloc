@@ -2,14 +2,9 @@
   margin: auto
 }
 
-body {
-  position: relative;
-  padding-bottom: 50px;
-}
-
 .footer {
     background: white;
-    position: fixed;
+    position: sticky;
     bottom: 0;
     width: 100%;
     display: flex;
