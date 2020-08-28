@@ -2,7 +2,7 @@
 <%= f.error_notification %>
 <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 <div class="form-inputs" >
-  <div class = "row">
+  <div class = "row" style="height: 259px">
     <div class="scene">
       <div class="card_task">
         <div class="card__face card__face--front"><%= image_tag "room.png" %>
@@ -18,7 +18,7 @@
       </div>
     </div>
   </div>
-  <div class = "row">
+  <div class = "row" style="height: 259px">
     <div class="scene">
       <div class="card_task">
         <div class="card__face card__face--front"><%= image_tag "bathroom.png" %>
@@ -34,7 +34,7 @@
       </div>
     </div>
   </div>
-  <div class = "row">
+  <div class = "row" style="height: 259px">
     <div class="scene">
       <div class="card_task">
         <div class="card__face card__face--front"><%= image_tag "bbq-grill.png" %>
@@ -51,6 +51,6 @@
     </div>
   </div>
   <div class="form-actions" >
-    <%= f.button :submit, "Ajouter", class: "btn-flat-white "%>
+    <%= f.button :submit, "Ajouter", class: "button btn-validate m-5"%>
   </div>
   <% end %>
