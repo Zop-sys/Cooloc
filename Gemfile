@@ -32,6 +32,7 @@ gem 'bootstrap', '~> 4.5.2'
 gem 'devise'
 gem 'devise_invitable', '~> 2.0.0'
 gem 'devise-i18n'
+gem 'postmark-rails'
 
 gem 'letter_opener', group: :development
 
