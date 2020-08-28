@@ -6,7 +6,7 @@ class TeamTasksController < ApplicationController
 
   def create
     @team = current_user.team
-    @team.task_ids = team_task_params
+    @team.task_ids = team_param
     if @team.save!
       redirect_to chores_path, notice: 'Tes tâches sont bien enregistrées ! '
     else
@@ -16,7 +16,7 @@ class TeamTasksController < ApplicationController
 
   private
 
-  def team_task_params
+  def team_param
     params.require(:team_task).permit(:task_id)
   end
 end

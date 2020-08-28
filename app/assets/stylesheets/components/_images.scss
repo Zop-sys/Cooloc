@@ -1,0 +1,47 @@
+
+// Image de la lampe en haut de la Homepage //
+
+.img-lamp-top {
+  height: 100px;
+  position: absolute;
+  top:0px;
+  right: 20%;
+}
+
+// Image de l'étagère de livres en haut de la homepage //
+
+.img-book-top {
+  height: 70px;
+  // position:absolute;
+}
+
+// Imag du panda en bas de la homepage //
+
+.img-panda-bottom-hero {
+  height: 120px;
+}
+
+.img-banner-hero {
+  height:180px;
+}
+
+
+// media queries //
+@media(min-width:800px) {
+  .img-book-top {
+    height: 130px;
+  }
+}
+
+@media(min-width:800px) {
+  .img-lamp-top {
+    height: 130px;
+  }
+  .img-banner-hero {
+    height: 300px;
+    margin-bottom:20px;
+  }
+  .img-panda-bottom-hero {
+    height: 200px;
+  }
+}

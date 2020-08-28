@@ -23,3 +23,10 @@ margin-top: 20px;
     margin: 30px 10px;
   }
 }
+
+
+@media(min-width: 800px) {
+  .text-hero-banner p {
+    font-size: 28px;
+  }
+}
