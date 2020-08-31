@@ -2,55 +2,69 @@
 <%= f.error_notification %>
 <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 <div class="form-inputs" >
-  <div class = "row" style="height: 259px">
-    <div class="scene">
+  <div class = "row mt-2" style="height: 259px">
+
+    <div class="scene card ml-1 mr-1">
       <div class="card_task">
-        <div class="card__face card__face--front"><%= image_tag "room.png" %>
+        <div class="card__face card__face--front card-img-top"><%= image_tag "room.png", class:"pb-4" %>
         </div>
-        <div class="card__face card__face--back"><%= f.collection_check_boxes :task_id, Task.all.where(room: "Salon"), :id, :title  %></div>
+        <div class="card__face card__face--back card-img-top card-reverse"><%= f.collection_check_boxes :task_id ,Task.all.where(room: "Salon"), :id, :title %></div>
       </div>
+      <h3 class="card-text text-center pb-2"> Salon </h3>
     </div>
-    <div class="scene">
+
+    <div class="scene card">
       <div class="card_task">
-        <div class="card__face card__face--front"><%= image_tag "toilet.png" %>
+        <div class="card__face card__face--front card-img-top"><%= image_tag "toilet.png", class:"pb-4" %>
         </div>
-        <div class="card__face card__face--back"><%= f.collection_check_boxes :task_id, Task.all.where(room: "Toilette"), :id, :title  %></div>
+        <div class="card__face card__face--back card-img-top"><%= f.collection_check_boxes :task_id, Task.all.where(room: "Toilette"), :id, :title  %></div>
       </div>
-    </div>
-  </div>
-  <div class = "row" style="height: 259px">
-    <div class="scene">
-      <div class="card_task">
-        <div class="card__face card__face--front"><%= image_tag "bathroom.png" %>
-        </div>
-        <div class="card__face card__face--back"><%= f.collection_check_boxes :task_id, Task.all.where(room: "Salle de bain"), :id, :title  %></div>
-      </div>
-    </div>
-    <div class="scene">
-      <div class="card_task">
-        <div class="card__face card__face--front"><%= image_tag "kitchen.png" %>
-        </div>
-        <div class="card__face card__face--back"><%= f.collection_check_boxes :task_id, Task.all.where(room: "Cuisine"), :id, :title  %></div>
-      </div>
+        <h3 class="card-text text-center pb-2"> Toilette </h3>
     </div>
   </div>
-  <div class = "row" style="height: 259px">
-    <div class="scene">
+
+
+  <div class = "row mt-2" style="height: 259px">
+    <div class="scene card ml-1 mr-1">
       <div class="card_task">
-        <div class="card__face card__face--front"><%= image_tag "bbq-grill.png" %>
+        <div class="card__face card__face--front card-img-top"><%= image_tag "bathroom.png", class:"pb-4" %>
         </div>
-        <div class="card__face card__face--back"><%= f.collection_check_boxes :task_id, Task.all.where(room: "Exterieur"), :id, :title  %></div>
+        <div class="card__face card__face--back card-img-top"><%= f.collection_check_boxes :task_id, Task.all.where(room: "Salle de Bain"), :id, :title  %></div>
       </div>
+        <h3 class="card-text text-center pb-2"> Salle de bain </h3>
     </div>
-    <div class="scene">
+
+    <div class="scene card">
       <div class="card_task">
-        <div class="card__face card__face--front"><%= image_tag "drawer.png" %>
+        <div class="card__face card__face--front card-img-top"><%= image_tag "kitchen.png", class:"pb-4" %>
         </div>
-        <div class="card__face card__face--back"><%= f.collection_check_boxes :task_id, Task.all.where(room: "Autres"), :id, :title  %></div>
+        <div class="card__face card__face--back card-img-top"><%= f.collection_check_boxes :task_id, Task.all.where(room: "Cuisine"), :id, :title  %></div>
       </div>
+      <h3 class="card-text text-center pb-2"> Cuisine </h3>
     </div>
   </div>
-  <div class="form-actions" >
+
+  <div class = "row mt-2" style="height: 259px">
+    <div class="scene card ml-1 mr-1">
+      <div class="card_task">
+        <div class="card__face card__face--front card-img-top"><%= image_tag "bbq-grill.png", class:"pb-4" %>
+        </div>
+        <div class="card__face card__face--back card-img-top"><%= f.collection_check_boxes :task_id, Task.all.where(room: "Exterieur"), :id, :title  %></div>
+      </div>
+      <h3 class="card-text text-center pb-2"> Exterieur </h3>
+    </div>
+
+    <div class="scene card">
+      <div class="card_task">
+        <div class="card__face card__face--front card-img-top"><%= image_tag "drawer.png", class:"pb-4" %>
+        </div>
+        <div class="card__face card__face--back card-img-top"><%= f.collection_check_boxes :task_id, Task.all.where(room: "Autres"), :id, :title  %></div>
+      </div>
+      <h3 class="card-text text-center pb-2"> Autres </h3>
+    </div>
+  </div>
+
+  <div class="form-actions pt-4 d-flex justify-content-center" >
     <%= f.button :submit, "Ajouter", class: "button btn-validate m-5"%>
   </div>
   <% end %>

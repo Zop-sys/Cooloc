@@ -1,95 +1,34 @@
-.banner {
-  background-color: $grey;
-  display: flex;
-  text-align: center;
-  border-radius: 15px;
-  margin-top: 50px;
-  margin-right: 20px;
-  margin-left: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 15px;
-  padding-right: 5px;
-  height: 100px;
+.card-chores {
+  background: white;
+  box-shadow: 0 0 5px $grey-light;
+  border-radius: 8px;
+  margin: 20px 5px 20px 5px;
+  height: auto;
+  width: 320px;
+}
 
-  h2 {
-  font-weight: bold;
+.top-chores {
+  background: $yellow-input;
+  border-radius: 8px 0px 8px 0px;
+  padding: 5px 10px 5px 10px;
+  font-size: 18px;
+  width: 30%;
+  font-family: $general-font;
+}
+
+.chore{
+  display:flex;
+  align-items: center;
+  margin-left: 5px;
+}
+
+.chorerespo {
   font-family: $regular-font;
-    }
-  }
-
-  button {
-    width: 200px;
-    height: 80px;
-    background-color: $grey;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: 2.5px;
-    margin-right: 15px;
-    border-radius: 20px;
-    border: none;
-    font-family: $regular-font;
-    font-size: 20px;
-    }
-
-  button:hover {
-      background-color: $yellow_input;
-      outline: none;
-    }
-
-
-.card-c {
-  border: 1px solid;
-  border-top-style:none;
-  border-color: #EEEEEE;
-  box-shadow: 0px 5px 5px #C3C3C3;
-  margin: 10px;
+  font-size: 17px;
 }
 
-.top {
-  background-color: $yellow_input;
-  text-align: center;
-  font-family: $regular-font;
-  width: 25%;
-  border-radius: 5px 0 5px 0;
+.chorename {
+  font-family: $general-font;
+  font-size: 20px;
+  margin-right: 10px;
 }
-
-.check {
-  height: 20px;
-  width: 10px;
-  display: flex;
-  flex: 1 1 0;
-}
-
-.line {
-  line-height: 5px;
-  flex: 2 1 0;
-  padding-left: 40px;
-}
-.task {
-  display: flex;
-  flex-direction: row;
-  margin-top: 10px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

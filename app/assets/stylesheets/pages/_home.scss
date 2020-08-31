@@ -25,8 +25,37 @@ margin-top: 20px;
 }
 
 
+.slogan {
+  text-align: center;
+  letter-spacing: .2rem;
+  font-size: 30px;
+  p {
+    font-family: $title-font;
+    margin-bottom: 0px;
+    margin-top:10px;
+    color: $purple;
+  }
+
+  // justify-content: space-between;
+}
+
+
+
 @media(min-width: 800px) {
   .text-hero-banner p {
     font-size: 28px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
