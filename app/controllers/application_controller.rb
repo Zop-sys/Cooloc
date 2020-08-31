@@ -7,4 +7,8 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:accept_invitation, keys: [:pseudo])
   end
+
+  def default_url_options
+  { host: ENV["DOMAIN"] || "localhost:3000" }
+  end
 end

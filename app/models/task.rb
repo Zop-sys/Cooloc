@@ -5,5 +5,13 @@ class Task < ApplicationRecord
 
   validates :room, acceptance: { accept: ["Salon", "Salle de Bain", "Toilette", "Autres", "Cuisine", "Exterieur"] }
 
-  validates :frequency, acceptance: { accept: ["Mensuel", "Hebdomadaire", "Bi-Hebdomadaire"] }
+  validates :frequency, acceptance: { accept: ['monthly', 'weekly'] }
+
+  def weekly?
+    frequency === 'weekly'
+  end
+
+  def monthly?
+    frequency === 'monthly'
+  end
 end
