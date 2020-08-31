@@ -34,6 +34,8 @@ gem 'devise_invitable', '~> 2.0.0'
 gem 'devise-i18n'
 gem 'postmark-rails'
 
+gem 'week_of_month'
+
 gem 'letter_opener', group: :development
 
 gem 'autoprefixer-rails'
