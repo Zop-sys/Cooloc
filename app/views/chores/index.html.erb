@@ -3,5 +3,10 @@
   <div class = "demo">
     <%= image_tag "panda.png" %>
   </div>
+  <div>
+    <% @team_tasks.each do |t| %>
+      <%= t %>
+    <% end %>
+  </div>
 </div>
 

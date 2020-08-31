@@ -9,8 +9,9 @@
 require "open-uri"
 
 puts "Cleaning database..."
-Chore.destroy_all
+TeamTask.destroy_all
 Task.destroy_all
+Chore.destroy_all
 User.destroy_all
 Team.destroy_all
 
@@ -39,22 +40,22 @@ puts "Tasks salon finished!"
 
 # tasks salle de bain
 aspirateur_bain = Task.create!(title:"Passer l'aspirateur", intensity: 2, room: "Salle de Bain", frequency:"Hebdomadaire")
-lavage_bain = Task.create!(title:"Passer la serplière", intensity: 3, room: "Salle de Bain", frequency:"Bi-Hebdomadaire")
-nettoyage_bain = Task.create!(title:"Nettoyer le lavabo et la douche/baignoire", intensity: 4, room: "Salle de Bain", frequency:"Hebdomadaire")
+lavage_bain = Task.create!(title:"Passer la serplière", intensity: 3, room: "Salle de Bain", frequency:"Mensuel")
+nettoyage_bain = Task.create!(title:"Nettoyer le lavabo et la douche/baignoire", intensity: 3, room: "Salle de Bain", frequency:"Mensuel")
 
 puts "Tasks salle de bain finished!"
 
 
 # tasks toilettes
 aspirateur_toilettes = Task.create!(title:"Passer l'aspirateur", intensity: 2, room: "Toilette", frequency:"Hebdomadaire")
-lavage_toilettes = Task.create!(title:"Passer la serplière", intensity: 3, room: "Toilette", frequency:"Bi-Hebdomadaire")
-nettoyage_toilettes = Task.create!(title:"Nettoyer les toilettes", intensity: 4, room: "Toilette", frequency:"Hebdomadaire")
+lavage_toilettes = Task.create!(title:"Passer la serplière", intensity: 3, room: "Toilette", frequency:"Mensuel")
+nettoyage_toilettes = Task.create!(title:"Nettoyer les toilettes", intensity: 3, room: "Toilette", frequency:"Mensuel")
 
 puts "Tasks toilettes finished!"
 
 
 # tasks exterieur
-jardin = Task.create!(title:"S'occuper du jardin", intensity: 2, room: "Exterieur", frequency:"Hebdomadaire")
+jardin = Task.create!(title:"S'occuper du jardin", intensity: 1, room: "Exterieur", frequency:"Hebdomadaire")
 terasse = Task.create!(title:"Balayer/Laver la terasse", intensity: 2, room: "Exterieur", frequency:"Hebdomadaire")
 mobilier = Task.create!(title:"Entretenir le mobilier extérieur", intensity: 2, room: "Exterieur", frequency:"Hebdomadaire")
 
@@ -103,44 +104,44 @@ puts "All users created"
 
 #chores
 
-chore = Chore.new
-chore.user = User.where(pseudo: 'Ava').first
-chore.task = Task.where(title: "S'occuper de la maintenance générale").first
-chore.save!
-puts "Created "
+# chore = Chore.new
+# chore.user = User.where(pseudo: 'Ava').first
+# chore.task = Task.where(title: "S'occuper de la maintenance générale").first
+# chore.save!
+# puts "Created "
 
-chore = Chore.new
-chore.user = User.where(pseudo: 'Ava').first
-chore.task = Task.where(title: "Balayer/Laver la terasse").first
-chore.save!
-puts "Created "
+# chore = Chore.new
+# chore.user = User.where(pseudo: 'Ava').first
+# chore.task = Task.where(title: "Balayer/Laver la terasse").first
+# chore.save!
+# puts "Created "
 
-chore = Chore.new
-chore.user = User.where(pseudo: 'Ava').first
-chore.task = Task.where(title: "Passer la serplière").first
-chore.save!
-puts "Created "
+# chore = Chore.new
+# chore.user = User.where(pseudo: 'Ava').first
+# chore.task = Task.where(title: "Passer la serplière").first
+# chore.save!
+# puts "Created "
 
-chore = Chore.new
-chore.user = User.where(pseudo: 'Ava').first
-chore.task = Task.where(title: "Laver la table, faire les poussières").first
-chore.save!
-puts "Created "
+# chore = Chore.new
+# chore.user = User.where(pseudo: 'Ava').first
+# chore.task = Task.where(title: "Laver la table, faire les poussières").first
+# chore.save!
+# puts "Created "
 
-chore = Chore.new
-chore.user = User.where(pseudo: 'Ava').first
-chore.task = Task.where(title: "S'occuper des animaux").first
-chore.save!
-puts "Created "
+# chore = Chore.new
+# chore.user = User.where(pseudo: 'Ava').first
+# chore.task = Task.where(title: "S'occuper des animaux").first
+# chore.save!
+# puts "Created "
 
-chore = Chore.new
-chore.user = User.where(pseudo: 'Léo').first
-chore.task = Task.where(title: "S'occuper des animaux").first
-chore.save!
-puts "Created "
+# chore = Chore.new
+# chore.user = User.where(pseudo: 'Léo').first
+# chore.task = Task.where(title: "S'occuper des animaux").first
+# chore.save!
+# puts "Created "
 
-chore = Chore.new
-chore.user = User.where(pseudo: 'Léo').first
-chore.task = Task.where(title: "Laver la table, faire les poussières").first
-chore.save!
-puts "Created "
+# chore = Chore.new
+# chore.user = User.where(pseudo: 'Léo').first
+# chore.task = Task.where(title: "Laver la table, faire les poussières").first
+# chore.save!
+# puts "Created "
