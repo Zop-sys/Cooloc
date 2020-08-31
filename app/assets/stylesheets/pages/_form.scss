@@ -28,7 +28,7 @@ h3 {
   transform: rotateY(180deg);
   label {
     overflow:scroll;
-    font-size:15px;
+    font-size:14px;
     font-weight:bold;
     color: #333E73;
     padding-left:4px;
@@ -47,6 +47,11 @@ h3 {
   font-size: 40px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+   span {
+    display:flex;
+    justify-content: flex-start;
+    align-items:center;
+   }
 }
 
 .card__face--front {

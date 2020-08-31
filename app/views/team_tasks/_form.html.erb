@@ -8,9 +8,7 @@
       <div class="card_task">
         <div class="card__face card__face--front card-img-top"><%= image_tag "room.png", class:"pb-4" %>
         </div>
-        <div class="card__face card__face--back card-img-top"><%= f.collection_check_boxes :task_id ,Task.all.where(room: "Salon"), :id, :title, class:"checkbox" %>
-           <%= link_to image_tag("arrow.png", class:"arrow"), new_team_task_path %>
-        </div>
+        <div class="card__face card__face--back card-img-top"><%= f.collection_check_boxes :task_id ,Task.all.where(room: "Salon"), :id, :title %></div>
       </div>
       <h3 class="card-text text-center pb-2"> Salon </h3>
     </div>
@@ -19,9 +17,7 @@
       <div class="card_task">
         <div class="card__face card__face--front card-img-top"><%= image_tag "toilet.png", class:"pb-4" %>
         </div>
-        <div class="card__face card__face--back card-img-top"><%= f.collection_check_boxes :task_id, Task.all.where(room: "Toilette"), :id, :title  %>
-           <%= link_to image_tag("arrow.png", class:"arrow"), new_team_task_path %>
-        </div>
+        <div class="card__face card__face--back card-img-top"><%= f.collection_check_boxes :task_id, Task.all.where(room: "Toilette"), :id, :title  %></div>
       </div>
         <h3 class="card-text text-center pb-2"> Toilette </h3>
     </div>
@@ -33,9 +29,7 @@
       <div class="card_task">
         <div class="card__face card__face--front card-img-top"><%= image_tag "bathroom.png", class:"pb-4" %>
         </div>
-        <div class="card__face card__face--back card-img-top"><%= f.collection_check_boxes :task_id, Task.all.where(room: "Salle de Bain"), :id, :title  %>
-          <%= link_to image_tag("arrow.png", class:"arrow"), new_team_task_path %>
-        </div>
+        <div class="card__face card__face--back card-img-top"><%= f.collection_check_boxes :task_id, Task.all.where(room: "Salle de Bain"), :id, :title  %></div>
       </div>
         <h3 class="card-text text-center pb-2"> Salle de bain </h3>
     </div>
@@ -44,9 +38,7 @@
       <div class="card_task">
         <div class="card__face card__face--front card-img-top"><%= image_tag "kitchen.png", class:"pb-4" %>
         </div>
-        <div class="card__face card__face--back card-img-top"><%= f.collection_check_boxes :task_id, Task.all.where(room: "Cuisine"), :id, :title  %>
-          <%= link_to image_tag("arrow.png", class:"arrow"), new_team_task_path %>
-        </div>
+        <div class="card__face card__face--back card-img-top"><%= f.collection_check_boxes :task_id, Task.all.where(room: "Cuisine"), :id, :title  %></div>
       </div>
       <h3 class="card-text text-center pb-2"> Cuisine </h3>
     </div>
@@ -57,9 +49,7 @@
       <div class="card_task">
         <div class="card__face card__face--front card-img-top"><%= image_tag "bbq-grill.png", class:"pb-4" %>
         </div>
-        <div class="card__face card__face--back card-img-top"><%= f.collection_check_boxes :task_id, Task.all.where(room: "Exterieur"), :id, :title  %>
-          <%= link_to image_tag("arrow.png", class:"arrow"), new_team_task_path %>
-        </div>
+        <div class="card__face card__face--back card-img-top"><%= f.collection_check_boxes :task_id, Task.all.where(room: "Exterieur"), :id, :title  %></div>
       </div>
       <h3 class="card-text text-center pb-2"> Exterieur </h3>
     </div>
@@ -68,9 +58,7 @@
       <div class="card_task">
         <div class="card__face card__face--front card-img-top"><%= image_tag "drawer.png", class:"pb-4" %>
         </div>
-        <div class="card__face card__face--back card-img-top"><%= f.collection_check_boxes :task_id, Task.all.where(room: "Autres"), :id, :title  %>
-          <%= link_to image_tag("arrow.png", class:"arrow"), new_team_task_path %>
-        </div>
+        <div class="card__face card__face--back card-img-top"><%= f.collection_check_boxes :task_id, Task.all.where(room: "Autres"), :id, :title  %></div>
       </div>
       <h3 class="card-text text-center pb-2"> Autres </h3>
     </div>
