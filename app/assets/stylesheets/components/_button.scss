@@ -112,12 +112,20 @@
 
 // -------- bouton ajouter un colocataire ------ //
 .btn-add {
-  height:4vh;
-  width: 8%;
   background-color: $red;
   font-family: $regular-font;
   border-radius: 5px;
-  margin-left: 20px;
+}
+
+// --------- Ajouter un email ---------- //
+.add-email {
+  font-family:$general-font;
+  color: $red;
+  font-style:italic;
+  font-weight:lighter;
+  &:hover {
+    color: $red;
+  }
 }
 
 // -------- comportement des boutons --------

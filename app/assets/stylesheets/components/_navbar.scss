@@ -11,13 +11,10 @@
   width: 90px;
 }
 
-.nav-link a {
-  font-size:10px;
-  font-family: $general-font;
-  color: $red;
-}
-
 .navbar-brand {
   padding: 0;
 }
 
+.nav-item a {
+  font-family: $general-font;
+}

@@ -7,16 +7,22 @@
     <%= f.error_notification %>
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
     <div class="formteam">
-      <div class=" devise_new"><%= f.input :name, label: 'Entre le nom de ton appartement', placeholder: "La ménagerie"%></div>
+      <div class=" devise_new"><%= f.input :name, label: 'Entre le nom de ton appartement'%></div>
     </div>
-    <div class="formteam">
+
+    <div class="formteam" id="addcoloc">
       <%= label_tag :roomates_emails, "Donne nous les mails de tes colocs" %>
-      <div class="d-flex justify-content-start">
-        <div class="inputteam devise_new"><%= text_field_tag "roomate_emails[]" %></div>
-        <%= f.button :submit, " # ", class: "btn-add" %>
+      <div class="">
+        <div id="roomate-emails">
+          <div class="inputteam devise_new mb-2"> <%= text_field_tag "roomate_emails[]" %></div>
+        </div>
+        <div class="formteam">
+          <%= f.button :submit, 'Ajoute un coloc', class: "add-email pl-0", id: 'add-roomate-btn-js' %>
+        </div>
       </div>
+
     </div>
-    <div class="container d-flex align-items-end justify-content-around position-fixed fixed-bottom mb-5 pb-4">
+    <div class="container d-flex align-items-end justify-content-around mt-4">
       <%= image_tag "lamp.png", height: 70 %>
       <%= f.button :submit, "Ajoute ta coloc", class: "button btn-validate" %>
     </div>
