@@ -9,11 +9,12 @@
 <div class="banner-container d-flex flex-column align-items-center justify-content-center">
   <%= image_tag "sofa-banner.png", class: "img-banner-hero mt-5" %>
 
+
  <!-- Si l'user n'est pas connecté -->
   <% if current_user.nil? %>
   <%= link_to "Commencez!", new_team_path, class: "button btn-start main-btn"%>
 
- <!-- Si l'user est deja connecté mais n'a pas de coloc -->
+
 
   <% elsif current_user.team.nil? %>
   <%= link_to "Crée Cooloc", new_team_path, class: "button btn-start main-btn"%>
@@ -22,6 +23,13 @@
   <% else %>
   <%= link_to "Travail restant", team_tasks_path, class: "button btn-start main-btn" %>
 <% end %>
+
+  <div class="slogan">
+    <p>Simple Pratique Amusant</p>
+
+  </div>
+ <%= link_to "Commencez!", new_team_path, class: "button btn-start main-btn" %>
+
 </div>
 
 
