@@ -2,13 +2,13 @@
 <%= f.error_notification %>
 <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 <div class="form-inputs" >
-  <div class = "row" style="height: 259px">
+  <div class = "row mt-2" style="height: 259px">
 
     <div class="scene card ml-1 mr-1">
       <div class="card_task">
         <div class="card__face card__face--front card-img-top"><%= image_tag "room.png", class:"pb-4" %>
         </div>
-        <div class="card__face card__face--back card-img-top"><%= f.collection_check_boxes :task_id, Task.all.where(room: "Salon"), :id, :title  %>
+        <div class="card__face card__face--back card-img-top"><%= f.collection_check_boxes :task_id ,Task.all.where(room: "Salon"), :id, :title, class:"checkbox" %>
            <%= link_to image_tag("arrow.png", class:"arrow"), new_team_task_path %>
         </div>
       </div>

@@ -7,9 +7,12 @@ h3 {
   width: 200px;
   height: 260px;
   border: none;
-  box-shadow: 5px 5px 10px #CCC;
+  box-shadow: 5px 5px 10px #CCCC;
   margin: 40px 0;
   perspective: 600px;
+   &:hover {
+    box-shadow: 5px 5px 10px #CCC;
+   }
 }
 
 .card_task {
@@ -24,8 +27,11 @@ h3 {
 .card_task.flipped {
   transform: rotateY(180deg);
   label {
-    font-size:14px;
+    overflow:scroll;
+    font-size:15px;
+    font-weight:bold;
     color: #333E73;
+    padding-left:4px;
   }
 }
 
@@ -61,4 +67,18 @@ h3 {
   text-align: inherit;
   bottom: 180px;
 }
+
+// -- media queries -- //
+
+  @media(min-width:500px) {
+  .form-inputs {
+    display:grid;
+    grid-template-columns: 3fr 3fr;
+  }
+  .row {
+    margin: 0px;
+    padding:5px;
+  }
+}
+
 
