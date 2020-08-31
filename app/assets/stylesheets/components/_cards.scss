@@ -1,0 +1,7 @@
+.card-reverse {
+  transform: scale(1.2);
+  height:400px;
+  &:active {
+    height:500px;
+  }
+}
