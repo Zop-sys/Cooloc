@@ -9,6 +9,9 @@
 <div class="banner-container d-flex flex-column align-items-center justify-content-center">
   <%= image_tag "sofa-banner.png", class: "img-banner-hero mt-5" %>
 
+  <div class="slogan">
+    <p>Simple Pratique Amusant</p>
+  </div>
 
  <!-- Si l'user n'est pas connecté -->
   <% if current_user.nil? %>
@@ -24,9 +27,6 @@
   <%= link_to "Travail restant", team_tasks_path, class: "button btn-start main-btn" %>
   <% end %>
 
-  <div class="slogan">
-    <p>Simple Pratique Amusant</p>
-  </div>
 
 </div>
 

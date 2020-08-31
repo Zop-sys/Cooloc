@@ -8,7 +8,7 @@
       <div class="card_task">
         <div class="card__face card__face--front card-img-top"><%= image_tag "room.png", class:"pb-4" %>
         </div>
-        <div class="card__face card__face--back card-img-top"><%= f.collection_check_boxes :task_id ,Task.all.where(room: "Salon"), :id, :title %></div>
+        <div class="card__face card__face--back card-img-top card-reverse"><%= f.collection_check_boxes :task_id ,Task.all.where(room: "Salon"), :id, :title %></div>
       </div>
       <h3 class="card-text text-center pb-2"> Salon </h3>
     </div>
