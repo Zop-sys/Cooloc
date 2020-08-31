@@ -3,6 +3,7 @@
 <head>
   <title>We're sorry, but something went wrong (500)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8">
   <style>
   .rails-default-error-page {
     background-color: #EFEFEF;
@@ -51,16 +52,104 @@
     color: #666;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
   }
+
+.button {
+     position: relative;
+  margin: 0;
+  padding: 5px 12px;
+  height: 60px;
+  width: 150px;
+  outline: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: #EE4266;
+  border-radius: 10px;
+  border:none !important;
+  font-weight: 400;
+  font-size: 15px;
+  font-family: $general-font;
+  color: #FBD659;
+  z-index: 0;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+  }
+
+  .dialog {
+    display: flex;
+    font-family: "Patrick Hand", "Helvetica", "sans-serif";
+  }
+
+  img {
+    margin-top: 150px;
+  }
+
+  .button {
+    margin-left: 350px;
+  }
+
+  .title h1 {
+    font-family: $title-font;
+    $purple;
+  }
+
+  .bulle {
+    margin: 20px;
+    display: inline-block;
+    position: relative;
+    width: 450px;
+    height: 450px ;
+    background-color: lightyellow;
+  }
+
+  .round{
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+
+}
+
+  .text {
+    padding: 1em;
+    text-align: left;
+    line-height: 1.5em;
+  }
+
+  .text p {
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    font-family: "Permanent Marker", "cursive;", "Helvetica", "sans-serif";
+  }
+
+
+
+
+
   </style>
 </head>
 
-<body class="rails-default-error-page">
+<body>
   <!-- This file lives in public/500.html -->
-  <div class="dialog">
-    <div>
-      <h1>We're sorry, but something went wrong.</h1>
+  <div>
+    <div class="dialog">
+      <img src="/images/panda-404.png" alt="panda">
+      <div class='bulle round'>
+        <div class="text">
+          <h1>Oops</h1>
+           <h2>500</h2>
+          <p>
+            Nous ne trouvons pas la page que vous recherchez.
+            Elle peut avoir expiré ou il pourrait y avoir une faute de frappe. Peut-être que vous pouvez trouver ce dont vous avez besoin sur notre page d'accueil.
+          </p>
+        </div>
+      </div>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
+    <div>
+      <button class="button">Page d'acceuil</button>
+    </div>
   </div>
 </body>
 </html>
