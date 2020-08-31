@@ -27,7 +27,7 @@ h3 {
 .card_task.flipped {
   transform: rotateY(180deg);
   label {
-    overflow:scroll;
+    height:14px;
     font-size:14px;
     font-weight:bold;
     color: #333E73;
