@@ -1,0 +1,34 @@
+.card-chores {
+  background: white;
+  box-shadow: 0 0 5px $grey-light;
+  border-radius: 8px;
+  margin: 20px 5px 20px 5px;
+  height: auto;
+  width: 320px;
+}
+
+.top-chores {
+  background: $yellow-input;
+  border-radius: 8px 0px 8px 0px;
+  padding: 5px 10px 5px 10px;
+  font-size: 18px;
+  width: 30%;
+  font-family: $general-font;
+}
+
+.chore{
+  display:flex;
+  align-items: center;
+  margin-left: 5px;
+}
+
+.chorerespo {
+  font-family: $regular-font;
+  font-size: 17px;
+}
+
+.chorename {
+  font-family: $general-font;
+  font-size: 20px;
+  margin-right: 10px;
+}
