@@ -1,6 +1,34 @@
 //* CSS du bouton a switcher
 
+.buttonchore {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: $purple ;
+  border-radius: 8px 8px 8px 8px;
+}
 
+.choreme {
+  background-color: $yellow-input ;
+  border-radius: 5px 5px 5px 5px;
+  margin: 10px;
+  padding:15px;
+  font-family: $general-font;
+  font-size: 20px;
+  width: 170px;
+  text-align: center;
+}
+
+.choreall {
+  background-color: $yellow-input ;
+  border-radius: 5px 5px 5px 5px;
+  margin: 5px;
+  padding: 15px;
+  font-family: $general-font;
+  font-size: 20px;
+  width: 170px;
+  text-align: center;
+}
 
 //* CSS des cards
 
@@ -8,9 +36,9 @@
   background: white;
   box-shadow: 0 0 5px $grey-light;
   border-radius: 8px;
-  margin: 20px 5px 20px 5px;
+  margin: 20px 0px 20px 0px;
   height: auto;
-  width: 320px;
+  width: auto;
 }
 
 .top-chores {
@@ -25,7 +53,15 @@
 .chore{
   display:flex;
   align-items: center;
-  margin-left: 5px;
+  padding: 10px;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.chore:last-child {
+  border-radius: 0 0 5px 5px;
 }
 
 .chorerespo {
@@ -36,5 +72,20 @@
 .chorename {
   font-family: $general-font;
   font-size: 20px;
-  margin-right: 10px;
+  padding-right: 10px;
+}
+
+.greenbox {
+  color: green;
+  font-size: 30px;
+}
+
+.redbox {
+  color: red;
+  font-size: 30px;
+}
+
+// si selection
+.selected {
+  background-color: $grey-light;
 }
