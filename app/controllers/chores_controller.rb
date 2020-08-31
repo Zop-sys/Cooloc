@@ -8,7 +8,7 @@ class ChoresController < ApplicationController
     @team_tasks = TeamTask.where(team_id: @team.id)
     @counter = 0
     @team_tasks.each do |team_task|
-      if team_task.frequency == "Mensuel"
+      if team_task.frequency == "monthly"
         @counter += team_tasks.intensity
       else
         @counter += team_task.intensity * 4
@@ -19,7 +19,7 @@ class ChoresController < ApplicationController
 
 
     #Dupliquer les tasks qui sont mensuels
-    @mensuel_tasks = TeamTask.where(frequency: "Mensuel")
+    @mensuel_tasks = TeamTask.where(frequency: "monthly")
 
 
 
