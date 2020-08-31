@@ -9,6 +9,7 @@ class TeamTasksController < ApplicationController
     @team.task_ids = team_param
     if @team.save!
       redirect_to chores_path, notice: 'Tes tâches sont bien enregistrées ! '
+      BuildTeamMonthlyPlanningService.new(@team).call
     else
       render :new
     end
