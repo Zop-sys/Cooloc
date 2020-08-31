@@ -1,11 +1,18 @@
-
+h3 {
+  font-family: $general-font;
+  color: $red;
+}
 
 .scene {
   width: 200px;
   height: 260px;
-  border: 1px solid #CCC;
+  border: none;
+  box-shadow: 5px 5px 10px #CCCC;
   margin: 40px 0;
   perspective: 600px;
+   &:hover {
+    box-shadow: 5px 5px 10px #CCC;
+   }
 }
 
 .card_task {
@@ -19,19 +26,34 @@
 
 .card_task.flipped {
   transform: rotateY(180deg);
+  label {
+    height:14px;
+    font-size:14px;
+    font-weight:bold;
+    color: #333E73;
+    padding-left:4px;
+    margin-bottom: 0px;
+  }
 }
 
 .card__face {
   position: absolute;
+  padding-left:10px;
   width: 100%;
   height: 100%;
   line-height: 260px;
   // color: white;
   text-align: center;
-  font-weight: bold;
+  // font-weight: lighter;
   font-size: 40px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+   span {
+    height:25px;
+    display:flex;
+    justify-content: flex-start;
+    align-items:center;
+   }
 }
 
 .card__face--front {
@@ -52,4 +74,18 @@
   text-align: inherit;
   bottom: 180px;
 }
+
+// -- media queries -- //
+
+  @media(min-width:500px) {
+  .form-inputs {
+    display:grid;
+    grid-template-columns: 3fr 3fr;
+  }
+  .row {
+    margin: 0px;
+    padding:5px;
+  }
+}
+
 
