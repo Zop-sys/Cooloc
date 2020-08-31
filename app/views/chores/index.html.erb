@@ -6,16 +6,33 @@
 
 <div class="card-chores">
     <h2 class="top-chores">Semaine</h2>
-    <div class="chore waiting">
+
+<!--chore en attente de validation : Pending-->
+    <div class="chore">
       <p class="chorename">Chore to do</p>
       <p class="chorerespo">Nom du coloc</p>
-      <p class="greenbox"><i class="fas fa-check-circle"></i></p>
-      <p class="redbox"><i class="fas fa-times-circle"></i></p>
+      <div class="boxes">
+        <p class="greenbox"><i class="fas fa-check-circle"></i></p>
+        <p class="redbox"><i class="fas fa-times-circle"></i></p>
+      </div>
     </div>
+
+<!--chore validée done-->
     <div class="chore selected">
       <p class="chorename">Chore to do</p>
       <p class="chorerespo">Nom du coloc</p>
-      <p class="greenbox"><i class="fas fa-check-circle"></i></p>
-      <p class="redbox"><i class="fas fa-times-circle"></i></p>
+      <div class="boxes">
+        <p class="greenbox"><i class="fas fa-check-circle"></i></p>
+      </div>
     </div>
+
+<!--chore validée no done-->
+ <div class="chore selected">
+      <p class="chorename">Chore to do</p>
+      <p class="chorerespo">Nom du coloc</p>
+      <div class="boxes">
+        <p class="redbox"><i class="fas fa-times-circle"></i></p>
+      </div>
+    </div>
+
 </div>

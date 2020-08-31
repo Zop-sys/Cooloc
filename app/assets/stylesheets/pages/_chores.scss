@@ -67,17 +67,25 @@
 .chorerespo {
   font-family: $regular-font;
   font-size: 17px;
+  width:32%;
+  padding-right: 10px;
 }
 
 .chorename {
   font-family: $general-font;
   font-size: 20px;
   padding-right: 10px;
+  width: 50%;
+}
+.boxes{
+  display: flex;
+  width: 18%;
 }
 
 .greenbox {
   color: green;
   font-size: 30px;
+  padding-right: 5px;
 }
 
 .redbox {
