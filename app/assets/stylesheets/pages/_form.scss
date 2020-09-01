@@ -4,8 +4,7 @@ h3 {
 }
 
 .scene {
-  width: 200px;
-  height: 260px;
+
   border: none;
   box-shadow: 5px 5px 10px #CCCC;
   margin: 40px 0;
@@ -37,7 +36,7 @@ h3 {
 }
 
 .card__face {
-  position: absolute;
+
   padding-left:10px;
   width: 100%;
   height: 100%;
@@ -61,7 +60,9 @@ h3 {
 }
 
 .card__face--front  img {
-    width: 140px;
+
+    height:300px;
+    padding: 40px;
   }
 
 .card__face--back {
@@ -73,19 +74,11 @@ h3 {
   height: 0%;
   text-align: inherit;
   bottom: 180px;
+  position: absolute;
 }
 
 // -- media queries -- //
 
-  @media(min-width:500px) {
-  .form-inputs {
-    display:grid;
-    grid-template-columns: 3fr 3fr;
-  }
-  .row {
-    margin: 0px;
-    padding:5px;
-  }
-}
+
 
 
