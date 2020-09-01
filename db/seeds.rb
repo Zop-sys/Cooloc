@@ -103,7 +103,9 @@ puts "Created #{user.pseudo}"
 puts "All users created"
 
 
+
 # chores
+
 
 # chore = Chore.new
 # chore.user = User.where(pseudo: 'Ava').first
