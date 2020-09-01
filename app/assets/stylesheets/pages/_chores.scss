@@ -87,6 +87,7 @@
   font-size: 15px;
   width:27%;
   padding-right: 10px;
+
 }
 
 .chorename {
@@ -100,13 +101,13 @@
 }
 
 .greenbox {
-  color: black;
+  color: $green;
   font-size: 30px;
   padding-right: 10px;
 }
 
 .redbox {
-  color: black;
+  color: $red;
   font-size: 30px;
 }
 
