@@ -1,6 +1,6 @@
 <div class="buttonchore">
-  <p class="choreme">Mes tâches</p>
-  <p class="choreall">Les tâches de tous</p>
+  <p class="choreme clicked">Mes tâches</p>
+  <a class="choreall noclicked"href="../team/chores">Les tâches</a>
 </div>
 <h2 class="top-chores"><%= Date.today.strftime('%B') %></h2>
 <% @monthly_chores.each do |monthly_chore| %>
