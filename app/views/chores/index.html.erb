@@ -9,7 +9,7 @@
   <h2 class="top-chores"><%= Date.today.strftime('%B') %></h2>
   <% @monthly_chores.each do |monthly_chore| %>
     <div class="chore">
-      <p class="chorename"> <%= monthly_chore.task.title %> </p>
+      <p class="chorename"> <%= "#{monthly_chore.task.title} - #{monthly_chore.task.room}" %> </p>
       <p class="chorerespo"><%= monthly_chore.user.pseudo%></p>
 
       <% if monthly_chore.status == "pending" %>
@@ -23,9 +23,10 @@
       </div>
         <% else %>
         <%= monthly_chore.status %>
-        <%= link_to "changer le statut", change_status_pending_chore_path(monthly_chore), method: :patch %>
+        <%= link_to change_status_pending_chore_path(monthly_chore), method: :patch do %>
+        <p><i class="fas fa-pencil-alt"></i>></p>
         <% end %>
-
+      <% end %>
     </div>
   <%end%>
 </div>
@@ -36,7 +37,7 @@
 <div class="card-chores">
   <h2 class="top-chores"><%= "Semaine du #{weekly_chore[0]}" %></h2>
   <div class="chore">
-    <p class="chorename"> <%= weekly_chore[1].first.task.title %> </p>
+    <p class="chorename"> <%= "#{weekly_chore[1].first.task.title} - #{weekly_chore[1].first.task.room}"%> </p>
     <p class="chorerespo"><%= weekly_chore[1].first.user.pseudo %></p>
   <% if weekly_chore[1].first.status == "pending" %>
     <div class="boxes">
@@ -49,8 +50,10 @@
     </div>
       <% else %>
       <%= weekly_chore[1].first.status %>
-      <%= link_to "changer le statut", change_status_pending_chore_path(weekly_chore[1]), method: :patch %>
+      <%= link_to change_status_pending_chore_path(weekly_chore[1]), method: :patch do %>
+      <p><i class="fas fa-pencil-alt"></i>></p>
       <% end %>
+    <% end %>
   </div>
 </div>
 <% end %>

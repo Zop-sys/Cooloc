@@ -71,7 +71,7 @@
 .chore{
   display:flex;
   align-items: center;
-  padding: 10px;
+  padding: 15px;
 
   p {
     margin-bottom: 0;
@@ -84,16 +84,15 @@
 
 .chorerespo {
   font-family: $regular-font;
-  font-size: 17px;
-  width:32%;
+  font-size: 15px;
+  width:27%;
   padding-right: 10px;
 }
 
 .chorename {
   font-family: $general-font;
-  font-size: 20px;
-  padding-right: 10px;
-  width: 50%;
+  font-size: 18px;
+  width: 65%;
 }
 .boxes{
   display: flex;
@@ -101,15 +100,13 @@
 }
 
 .greenbox {
-  color: green;
+  color: black;
   font-size: 30px;
   padding-right: 10px;
 }
 
-
-
 .redbox {
-  color: red;
+  color: black;
   font-size: 30px;
 }
 
