@@ -14,17 +14,14 @@
   </div>
 
  <!-- Si l'user n'est pas connecté -->
-  <% if current_user.nil? %>
-  <%= link_to "Commencez!", new_team_path, class: "button btn-start main-btn"%>
-
-
-
-  <% elsif current_user.team.nil? %>
-  <%= link_to "Crée Cooloc", new_team_path, class: "button btn-start main-btn"%>
-
+  <% if current_user.team.nil? %>
+    <%= link_to "Commencez!", new_team_path, class: "button btn-start main-btn"%>
  <!-- Si l'user est déja connecté --->
+ <!-- Si user co a une team mais pas encore de team task -->
+  <% elsif current_user.team.team_tasks.nil? %>
+    <%= link_to "Choisis tes tâches!", team_tasks_path, class: "button btn-start main-btn"%>
   <% else %>
-  <%= link_to "Travail restant", team_tasks_path, class: "button btn-start main-btn" %>
+    <%= link_to "#{current_user.team.name}", chores_path, class: "button btn-start main-btn text-center" %>
   <% end %>
 
 
