@@ -19,6 +19,12 @@ Rails.application.routes.draw do
 
   namespace :team do
     # might not be needed, might be implemented in /chores
-    resources :chores, only: [:index]
+    resources :chores, only: [:index] do
+       member do
+      patch :change_status_done
+      patch :change_status_uncomplete
+      patch :change_status_pending
+    end
+    end
   end
 end
