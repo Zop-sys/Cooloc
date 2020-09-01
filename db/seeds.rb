@@ -9,9 +9,10 @@
 require "open-uri"
 
 puts "Cleaning database..."
+Chore.destroy_all
 TeamTask.destroy_all
 Task.destroy_all
-Chore.destroy_all
+
 User.destroy_all
 Team.destroy_all
 
@@ -102,7 +103,9 @@ puts "Created #{user.pseudo}"
 puts "All users created"
 
 
-#chores
+
+# chores
+
 
 # chore = Chore.new
 # chore.user = User.where(pseudo: 'Ava').first

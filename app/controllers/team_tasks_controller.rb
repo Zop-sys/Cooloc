@@ -6,10 +6,9 @@ class TeamTasksController < ApplicationController
 
   def create
     @team = current_user.team
-    @team.task_ids = team_param
-    if @team.save!
-      redirect_to chores_path, notice: 'Tes tâches sont bien enregistrées ! '
+    if @team.update(task_ids: team_params[:task_id])
       BuildTeamMonthlyPlanningService.new(@team).call
+      redirect_to chores_path, notice: 'Tes tâches sont bien enregistrées ! '
     else
       render :new
     end
@@ -17,7 +16,7 @@ class TeamTasksController < ApplicationController
 
   private
 
-  def team_param
-    params.require(:team_task).permit(:task_id)
+  def team_params
+    params.require(:team_task).permit(task_id: [])
   end
 end
