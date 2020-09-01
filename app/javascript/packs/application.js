@@ -38,5 +38,3 @@ document.addEventListener('turbolinks:load', () => {
   initAddRoomateEmailInput();
     flip();
 });
-
-
