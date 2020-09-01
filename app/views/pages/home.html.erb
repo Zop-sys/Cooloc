@@ -14,7 +14,7 @@
   </div>
 
  <!-- Si l'user n'est pas connecté -->
-  <% if current_user.team.nil? %>
+  <% if current_user.nil? %>
     <%= link_to "Commencez!", new_team_path, class: "button btn-start main-btn"%>
  <!-- Si l'user est déja connecté --->
  <!-- Si user co a une team mais pas encore de team task -->
