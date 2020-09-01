@@ -11,7 +11,6 @@ require "open-uri"
 puts "Cleaning database..."
 TeamTask.destroy_all
 Task.destroy_all
-Chore.destroy_all
 User.destroy_all
 Team.destroy_all
 
