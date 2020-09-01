@@ -54,99 +54,67 @@
   }
 
   .button {
-     position: relative;
-  margin: 0;
-  padding: 5px 12px;
-  height: 60px;
-  width: 150px;
-  outline: none;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  text-transform: uppercase;
-  background-color: #EE4266;
-  border-radius: 10px;
-  border:none !important;
-  font-weight: 400;
-  font-size: 15px;
-  font-family: $general-font;
-  color: #FBD659;
-  z-index: 0;
-  overflow: hidden;
-  transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
-  }
-
-  .dialog {
+    position: relative;
+    margin: 0;
+    padding: 5px 12px;
+    height: 60px;
+    width: 150px;
+    outline: none;
+    text-decoration: none;
     display: flex;
-    font-family: "Patrick Hand", "Helvetica", "sans-serif";
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #EE4266;
+    border-radius: 10px;
+    border:none !important;
+    font-weight: 400;
+    font-size: 15px;
+    font-family: $general-font;
+    color: #FBD659;
+    z-index: 0;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+
   }
 
   img {
-    margin-top: 150px;
+    width: 150px;
+    height: 100px;
+    margin-top: 100px;
   }
 
-  .button {
-    margin-left: 350px;
+  .dialog {
+    text-align: center;
   }
 
-  .title h1 {
-    font-family: $title-font;
-    $purple;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
-
-  .bulle {
-    margin: 20px;
-    display: inline-block;
-    position: relative;
-    width: 450px;
-    height: 450px ;
-    background-color: lightyellow;
-  }
-
-  .round{
-    border-radius: 30px;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-
-}
-
-  .text {
-    padding: 1em;
-    text-align: left;
-    line-height: 1.5em;
-  }
-
-  .text p {
-    -webkit-margin-before: 0em;
-    -webkit-margin-after: 0em;
-    font-family: "Permanent Marker", "cursive;", "Helvetica", "sans-serif";
-  }
-
-
 
   </style>
 </head>
 
 <body>
   <!-- This file lives in public/404.html -->
-  <div>
+  <div class='container'>
     <div class="dialog">
-      <img src="/images/panda-404.png" alt="panda">
+      <img src="/images/panda_larme.png" alt="panda">
       <div class='bulle round'>
         <div class="text">
           <h1>Oops</h1>
            <h2>404</h2>
           <p>
             Nous ne trouvons pas la page que vous recherchez.
-            Elle peut avoir expiré ou il pourrait y avoir une faute de frappe. Peut-être que vous pouvez trouver ce dont vous avez besoin sur notre page d'accueil.
-          </p>
         </div>
       </div>
     </div>
-    <div>
-      <button class="button">Page d'acceuil</button>
+    <div class='container'>
+      <a href='/' class='button'>Page d'acceuil</a>
     </div>
   </div>
 </body>
