@@ -53,7 +53,7 @@
   <% elsif current_user.team.team_tasks.nil? %>
     <%= link_to "Choisis tes tâches!", team_tasks_path, class: "button btn-start main-btn"%>
   <% else %>
-    <%= link_to "#{current_user.team.name}", chores_path, class: "button btn-start main-btn text-center" %>
+    <%= link_to "Au travail!", chores_path, class: "button btn-start main-btn text-center" %>
   <% end %>
 
 
