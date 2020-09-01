@@ -8,7 +8,8 @@ Rails.application.routes.draw do
 
   resources :chores, only: [:index] do
     member do
-      patch :mark_as_done
+      patch :change_status_done
+      patch :change_status_uncomplete
     end
   end
 
