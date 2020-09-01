@@ -1,4 +1,5 @@
 
+
 <%= simple_form_for(@team_task) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
@@ -10,9 +11,9 @@
           <div class="card__face card__face--front card-img-top">
             <%= image_tag "room.png", class:"pb-4" %>
           </div>
-          <div class="card__face card__face--back card-img-top">
+          <div class="card__face card__face--back card-img-top ks-cboxtags">
             <%= f.collection_check_boxes :task_id ,Task.all.where(room: "Salon"), :id, :title %>
-            <%= image_tag "arrow.png", height:40, class:"mt-2 return-arrow" %>
+            <%= image_tag "return.png", height:40, class:"mt-2 arrow return-arrow" %>
           </div>
         </div>
         <h3 class="card-text text-center pb-2"> Salon </h3>
@@ -25,9 +26,9 @@
           <div class="card__face card__face--front card-img-top">
             <%= image_tag "toilet.png", class:"pb-4" %>
           </div>
-          <div class="card__face card__face--back card-img-top">
-            <%= f.collection_check_boxes :task_id, Task.all.where(room: "Toilette"), :id, :title  %>
-            <%= image_tag "arrow.png", height:40, class:"mt-2 return-arrow" %>
+          <div class="card__face card__face--back card-img-top ks-cboxtags">
+            <%= f.collection_check_boxes :task_id, Task.all.where(room: "Toilette"), :id, :title %>
+            <%= image_tag "return.png", height:40, class:"mt-2 arrow return-arrow" %>
           </div>
           </div>
           <h3 class="card-text text-center pb-2"> Toilette </h3>
@@ -40,9 +41,9 @@
           <div class="card__face card__face--front card-img-top">
             <%= image_tag "bathroom.png", class:"pb-4" %>
           </div>
-          <div class="card__face card__face--back card-img-top">
+          <div class="card__face card__face--back card-img-top ks-cboxtags">
             <%= f.collection_check_boxes :task_id, Task.all.where(room: "Salle de Bain"), :id, :title  %>
-            <%= image_tag "arrow.png", height:40, class:"mt-2 return-arrow" %>
+            <%= image_tag "return.png", height:40, class:"mt-2 arrow return-arrow" %>
           </div>
         </div>
         <h3 class="card-text text-center pb-2"> Salle de bain </h3>
@@ -55,9 +56,9 @@
           <div class="card__face card__face--front card-img-top">
             <%= image_tag "kitchen.png", class:"pb-4" %>
           </div>
-          <div class="card__face card__face--back card-img-top">
+          <div class="card__face card__face--back card-img-top ks-cboxtags">
             <%= f.collection_check_boxes :task_id, Task.all.where(room: "Cuisine"), :id, :title  %>
-            <%= image_tag "arrow.png", height:40, class:"mt-2 return-arrow" %>
+            <%= image_tag "return.png", height:40, class:"mt-2 arrow return-arrow" %>
           </div>
         </div>
         <h3 class="card-text text-center pb-2"> Cuisine </h3>
@@ -70,9 +71,9 @@
           <div class="card__face card__face--front card-img-top">
             <%= image_tag "bbq-grill.png", class:"pb-4" %>
           </div>
-          <div class="card__face card__face--back card-img-top">
+          <div class="card__face card__face--back card-img-top ks-cboxtags">
             <%= f.collection_check_boxes :task_id, Task.all.where(room: "Exterieur"), :id, :title  %>
-            <%= image_tag "arrow.png", height:40, class:"mt-2 return-arrow" %>
+            <%= image_tag "return.png", height:40, class:"mt-2 arrow return-arrow" %>
           </div>
         </div>
         <h3 class="card-text text-center pb-2"> Exterieur </h3>
@@ -85,9 +86,9 @@
           <div class="card__face card__face--front card-img-top">
             <%= image_tag "drawer.png", class:"pb-4" %>
           </div>
-          <div class="card__face card__face--back card-img-top">
+          <div class="card__face card__face--back card-img-top ks-cboxtags">
             <%= f.collection_check_boxes :task_id, Task.all.where(room: "Autres"), :id, :title  %>
-            <%= image_tag "arrow.png", height:40, class:"mt-2 return-arrow" %>
+            <%= image_tag "return.png", height:40, class:"mt-2 arrow return-arrow" %>
           </div>
         </div>
         <h3 class="card-text text-center pb-2"> Autres </h3>
