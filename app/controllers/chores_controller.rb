@@ -9,15 +9,22 @@ class ChoresController < ApplicationController
   end
 
   def change_status_done
-    @chore = Chore.find(param[:id])
+    @chore = Chore.find(params[:id])
     @chore.status = "done"
     @chore.save
     redirect_to chores_path
   end
 
   def change_status_uncomplete
-    @chore = Chore.find(param[:id])
+    @chore = Chore.find(params[:id])
     @chore.status = "uncomplete"
+    @chore.save
+    redirect_to chores_path
+  end
+
+  def change_status_pending
+    @chore = Chore.find(params[:id])
+    @chore.status = "pending"
     @chore.save
     redirect_to chores_path
   end
