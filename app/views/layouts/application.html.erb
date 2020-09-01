@@ -29,10 +29,11 @@
 
     <div id="main-container">
 
+      <% unless current_page?(root_path) %>
        <%= render 'shared/navbar' %>
 
-      <%= render 'shared/flashes' %>
-
+       <%= render 'shared/flashes' %>
+      <% end %>
     <div class="container mb-5">
 
      <%= yield %>
