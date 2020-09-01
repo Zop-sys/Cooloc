@@ -87,6 +87,7 @@
 
   .dialog {
     text-align: center;
+    font-family: "Permanent Marker", "cursive;", "Helvetica", "sans-serif";
   }
 
   .container {
@@ -94,6 +95,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 50px;
   }
 
   </style>
@@ -101,21 +103,26 @@
 
 <body>
   <!-- This file lives in public/404.html -->
-  <div class='container'>
-    <div class="dialog">
-      <img src="/images/panda_larme.png" alt="panda">
-      <div class='bulle round'>
-        <div class="text">
-          <h1>Oops</h1>
-           <h2>404</h2>
-          <p>
-            Nous ne trouvons pas la page que vous recherchez.
+  <div class='general'>
+
+    <div class='container'>
+      <div class="dialog">
+        <img src="/images/panda_larme.png" alt="panda">
+        <div class='bulle round'>
+          <div class="text">
+            <h1>Oops</h1>
+             <h2>404</h2>
+            <p>
+              Nous ne trouvons pas la page que vous recherchez.
+          </div>
         </div>
       </div>
+      <div class='container'>
+        <a href='/' class='button'>Page d'acceuil</a>
+      </div>
     </div>
-    <div class='container'>
-      <a href='/' class='button'>Page d'acceuil</a>
-    </div>
+
   </div>
+
 </body>
 </html>
