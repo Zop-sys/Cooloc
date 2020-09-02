@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   resources :team_tasks, only: [:new, :create]
 
   namespace :team do
+    resources :teams, only: [:index]
     # might not be needed, might be implemented in /chores
     resources :chores, only: [:index]
   end
