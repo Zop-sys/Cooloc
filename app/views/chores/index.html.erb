@@ -27,19 +27,18 @@
 
       <% elsif monthly_chore.status == "done"%>
         <div class="boxes">
+          <p class="greenbox"><i class="fas fa-check-circle"></i></p>
           <%= link_to change_status_pending_chore_path(monthly_chore), method: :patch do %>
-              <p><i class="fas fa-pencil-alt"></i></p>
-            <p class="greenbox"><i class="fas fa-check-circle"></i></p>
-            <% end %>
+              <p class="pencilbox"><i class="fas fa-pencil-alt"></i></p>
+          <% end %>
         </div>
 
       <% else %>
         <div class="boxes">
           <%= link_to change_status_pending_chore_path(monthly_chore), method: :patch do %>
-              <p><i class="fas fa-pencil-alt"></i></p>
+              <p class="pencilbox"><i class="fas fa-pencil-alt"></i></p>
+          <% end %>
             <p class="redbox"><i class="fas fa-times-circle"></i></p>
-          </div>
-            <% end %>
         </div>
 
       <% end %>
@@ -53,34 +52,46 @@
 
 
 <% @weekly_chores_by_week_number.each do |weekly_chore|  %>
+
 <div class="card-chores">
   <h2 class="top-chores"><%= "#{weekly_chore[0]} éme semaine" %></h2>
+
   <div class="chore">
+
     <p class="chorename"> <%= "#{weekly_chore[1].first.task.title} - #{weekly_chore[1].first.task.room}"%> </p>
     <p class="chorerespo "><%= weekly_chore[1].first.user.pseudo %></p>
-  <% if weekly_chore[1].first.status == "pending" %>
-    <div class="boxes ">
-      <%= link_to change_status_done_chore_path(weekly_chore[1]), method: :patch do %>
-        <p class="greenbox"><i class="fas fa-check-circle"></i></p>
-      <% end %>
-      <%= link_to change_status_uncomplete_chore_path(weekly_chore[1]), method: :patch do %>
-        <p class="redbox"><i class="fas fa-times-circle"></i></p>
-      <% end %>
-    </div>
-      <% elsif weekly_chore[1].first.status == "done" %>
+
+    <% if weekly_chore[1].first.status == "pending" %>
+      <div class="boxes ">
+        <%= link_to change_status_done_chore_path(weekly_chore[1]), method: :patch do %>
+          <p class="greenbox"><i class="fas fa-check-circle"></i></p>
+        <% end %>
+        <%= link_to change_status_uncomplete_chore_path(weekly_chore[1]), method: :patch do %>
+          <p class="redbox"><i class="fas fa-times-circle"></i></p>
+        <% end %>
+      </div>
+
+    <% elsif weekly_chore[1].first.status == "done" %>
       <div class="boxes">
         <%= link_to change_status_pending_chore_path(weekly_chore[1]), method: :patch do %>
-        <p><i class="fas fa-pencil-alt"></i></p>
+          <p class="pencilbox"><i class="fas fa-pencil-alt"></i></p>
         <% end %>
-        <p class="greenbox"><i class="fas fa-check-circle"></i></p>
-    </div>
+          <p class="greenbox"><i class="fas fa-check-circle"></i></p>
+      </div>
+
     <% else %>
-    <div class="boxes">
-      <%= link_to change_status_pending_chore_path(weekly_chore[1]), method: :patch do %>
-        <p><i class="fas fa-pencil-alt"></i></p>
+      <div class="boxes">
+        <%= link_to change_status_pending_chore_path(weekly_chore[1]), method: :patch do %>
+          <p class="pencilbox"><i class="fas fa-pencil-alt"></i></p>
         <% end %>
-       <p class="redbox"><i class="fas fa-times-circle"></i></p>
+        <p class="redbox"><i class="fas fa-times-circle"></i></p>
+      </div>
+
+
     <% end %>
+
   </div>
-<% end %>
+
 </div>
+
+<% end %>
