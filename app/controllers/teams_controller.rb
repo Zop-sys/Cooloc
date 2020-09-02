@@ -14,9 +14,11 @@ class TeamsController < ApplicationController
 
         User.invite!(email: roomate_email, team: @team)
       end
+      redirect_to new_team_task_path
+    else
+      render :new
     end
 
-    redirect_to new_team_task_path
   end
 
   private
