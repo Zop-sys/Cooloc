@@ -1,10 +1,15 @@
+html {
+  height:100%;
+}
+
 .icone-center {
-    margin: auto
+    margin: auto;
 }
 
 .footer {
     background: white;
-    position: static;
+    opacity: 0.6;
+    position: fixed;
     bottom: 0;
     width: 100%;
     display: flex;
@@ -22,7 +27,7 @@
 
   .footer-links a {
     color: black;
-    opacity: 0.20;
+    opacity: 0.6;
     text-decoration: none;
     font-size: 24px;
     padding: 0px 10px;
