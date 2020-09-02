@@ -5,8 +5,8 @@ class ChoresController < ApplicationController
                                                 .order(:created_at)
     @monthly_chores               = @chores.where(tasks: { frequency: 'monthly' })
     @weekly_chores_by_week_number = @chores.where(tasks: { frequency: 'weekly' })
+                                           .order(:week_number, :id)
                                            .group_by(&:week_number)
-
   end
 
   def change_status_done
