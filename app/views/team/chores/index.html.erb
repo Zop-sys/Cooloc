@@ -13,16 +13,16 @@
     <p class="chorerespo"><%= monthly_chore.user.pseudo%></p>
     <% if monthly_chore.status == "pending" %>
     <div class="boxes">
-      <%= link_to change_status_done_team_chore_path(monthly_chore), method: :patch do %>
+      <%= link_to change_status_done_chore_path(monthly_chore), method: :patch do %>
       <p class="greenbox"><i class="fas fa-check-circle"></i></p>
       <% end %>
-      <%= link_to change_status_uncomplete_team_chore_path(monthly_chore), method: :patch do %>
+      <%= link_to change_status_uncomplete_chore_path(monthly_chore), method: :patch do %>
       <p class="redbox"><i class="fas fa-times-circle"></i></p>
       <% end %>
     </div>
       <% else %>
       <%= monthly_chore.status %>
-      <%= link_to "changer le statut", change_status_pending_team_chore_path(monthly_chore), method: :patch %>
+      <%= link_to "changer le statut", change_status_pending_chore_path(monthly_chore), method: :patch %>
       <% end %>
   </div>
   <%end%>
@@ -40,16 +40,16 @@
     <p class="chorerespo"><%= chore_per_user.user.pseudo %></p>
       <% if chore_per_user.status == "pending" %>
     <div class="boxes">
-      <%= link_to change_status_done_team_chore_path(chore_per_user), method: :patch do %>
+      <%= link_to change_status_done_chore_path(chore_per_user), method: :patch do %>
       <p class="greenbox"><i class="fas fa-check-circle"></i></p>
       <% end %>
-      <%= link_to change_status_uncomplete_team_chore_path(chore_per_user), method: :patch do %>
+      <%= link_to change_status_uncomplete_chore_path(chore_per_user), method: :patch do %>
       <p class="redbox"><i class="fas fa-times-circle"></i></p>
       <% end %>
     </div>
       <% else %>
       <%= chore_per_user.status %>
-      <%= link_to "changer le statut", change_status_pending_team_chore_path(chore_per_user), method: :patch %>
+      <%= link_to "changer le statut", change_status_pending_chore_path(chore_per_user), method: :patch %>
       <% end %>
   </div>
   <% end %>

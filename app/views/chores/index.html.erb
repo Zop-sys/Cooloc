@@ -35,10 +35,10 @@
 
       <% else %>
         <div class="boxes">
+          <!--<p class="redbox"><i class="fas fa-times-circle"></i></p>-->
           <%= link_to change_status_pending_chore_path(monthly_chore), method: :patch do %>
               <p class="pencilbox"><i class="fas fa-pencil-alt"></i></p>
           <% end %>
-            <p class="redbox"><i class="fas fa-times-circle"></i></p>
         </div>
 
       <% end %>
