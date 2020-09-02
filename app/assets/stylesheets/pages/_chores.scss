@@ -93,21 +93,25 @@
 .chorename {
   font-family: $general-font;
   font-size: 18px;
-  width: 65%;
+  width: 80%;
 }
 .boxes{
   display: flex;
-  width: 18%;
+  width: 20%;
 }
 
 .greenbox {
   color: $green;
   font-size: 30px;
-  padding-right: 10px;
 }
 
 .redbox {
   color: $red;
+  font-size: 30px;
+}
+
+.pencilbox {
+  color: $purple;
   font-size: 30px;
 }
 

@@ -1,10 +1,12 @@
 class ChoresController < ApplicationController
   def index
-    @chores                       = current_user.chores.for_planning.includes(:task)
+    @chores                       = current_user.chores
+                                                .for_planning.includes(:task)
+                                                .order(:created_at)
     @monthly_chores               = @chores.where(tasks: { frequency: 'monthly' })
     @weekly_chores_by_week_number = @chores.where(tasks: { frequency: 'weekly' })
+                                           .order(:week_number, :id)
                                            .group_by(&:week_number)
-
   end
 
   def change_status_done
