@@ -5,3 +5,15 @@
     height:500px;
   }
 }
+
+.classement-card {
+  weight: 80px;
+  height: 60px;
+  border-radius: 10px;
+  border-color: $purple !important;
+
+}
+
+.card-main-classement {
+  box-shadow: 0 0 10px $grey-light;
+}
