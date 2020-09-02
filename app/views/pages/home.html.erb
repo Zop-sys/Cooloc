@@ -1,7 +1,7 @@
 <div class="d-flex align-items-start justify-content-between">
   <%= image_tag "ceiling-lamp.png", class: "img-lamp-top" %>
   <div></div>
-  <%= image_tag "bookshelf.png", class: "img-book-top mr-5 pr-5" %>
+  <%= image_tag "bookshelf.png", class: "img-book-top mr-4 pr-5" %>
 </div>
 
 <div class="banner-container d-flex flex-column align-items-center justify-content-center">
@@ -16,8 +16,8 @@
     <%= link_to "Commencez!", new_team_path, class: "button btn-start main-btn"%>
  <!-- Si l'user est déja connecté --->
  <!-- Si user co a une team mais pas encore de team task -->
-  <% elsif current_user.team.team_tasks.nil? %>
-    <%= link_to "Choisis tes tâches!", team_tasks_path, class: "button btn-start main-btn"%>
+  <% elsif current_user.team_id.nil? %>
+    <%= link_to "Crée ta Cooloc!", new_team_path, class: "button btn-start main-btn"%>
   <% else %>
     <%= link_to "Au travail!", chores_path, class: "button btn-start main-btn text-center" %>
   <% end %>
