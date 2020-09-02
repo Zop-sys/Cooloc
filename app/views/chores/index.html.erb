@@ -6,7 +6,7 @@
 </div>
 
 <div class="card-chores">
-  <h2 class="top-chores"><%= "Mes tâches du mois" %></h2>
+  <h2 class="top-chores"><%= Date.today.strftime('%B') %></h2>
 
   <% @monthly_chores.each do |monthly_chore| %>
 
