@@ -1,76 +1,61 @@
 <h1 class = "titlechores pt-5 pb-3"><%= "C'est parti chez #{current_user.team.name}!"%></h1>
-
 <div class="buttonchore">
-   <a class="choreme noclicked"href="../chores">Mes tâches</a>
+  <a class="choreme noclicked"href="../chores">Mes tâches</a>
   <p class="choreall clicked">Les tâches de la coloc</p>
 </div>
-
-
 <div class="card-chores">
   <h2 class="top-chores"><%= "Les tâches du mois" %></h2>
   <% @team_monthly_chores.each do |monthly_chore| %>
-
-    <div class="chore">
-      <p class="chorename"> <%= "#{monthly_chore.task.title} - #{monthly_chore.task.room}" %> </p>
-      <% if monthly_chore.status == "uncomplete" %>
-        <p><i class="far fa-angry"></i></p>
-      <%end%>
-      <p class="chorerespo"><%= monthly_chore.user.pseudo%></p>
-
-        <div class="boxes">
+  <div class="chore">
+    <p class="chorename"> <%= "#{monthly_chore.task.title} - #{monthly_chore.task.room}" %> </p>
+    <% if monthly_chore.status == "uncomplete" %>
+    <p><i class="far fa-angry"></i></p>
+    <%end%>
+    <p class="chorerespo"><%= monthly_chore.user.pseudo%></p>
+    <div class="boxes">
       <% if monthly_chore.status == "pending"%>
-          <p class="greybox"><i class="far fa-circle"></i></p>
-        </div>
+      <p class="greybox"><i class="far fa-circle"></i></p>
       <% elsif monthly_chore.status == "done"%>
-          <p class="greybox"><i class="far fa-check-circle"></i></p>
-        </div>
+      <p class="greybox"><i class="far fa-check-circle"></i></p>
       <% else %>
-          <p class="greybox"><i class="far fa-times-circle"></i></p>
-        </div>
+      <p class="greybox"><i class="far fa-times-circle"></i></p>
       <%end%>
-
-        <div class="dropleft">
-          <i class="fas fa-ellipsis-v" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <%= link_to "Mal fait", change_status_uncomplete_chore_path(monthly_chore, list: :team), method: :patch, class:' dropdown-item' %>
-          </div>
-        </div>
+    </div>
+    <div class="dropleft">
+      <i class="fas fa-ellipsis-v" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <%= link_to "Mal fait", change_status_uncomplete_chore_path(monthly_chore, list: :team), method: :patch, class:' dropdown-item' %>
       </div>
-  <%end%>
+    </div>
   </div>
+  <%end%>
 </div>
-
 <% @team_weekly_chores_by_week_number.each do |week_number, weekly_chores| %>
-  <div class="card-chores">
-    <h2 class="top-chores"><%= "Semaine du #{week_number} au #{week_number + 1}" %></h2>
-    <% weekly_chores.each do |chore_per_user| %>
-      <div class="chore">
-
-        <p class="chorename"> <%= "#{chore_per_user.task.title} - #{chore_per_user.task.room}" %> </p>
-        <% if chore_per_user.status == "uncomplete" %>
-          <p><i class="far fa-angry"></i></p>
-        <%end%>
-        <p class="chorerespo"><%= chore_per_user.user.pseudo %></p>
-
-
-        <div class="boxes">
+<div class="card-chores">
+  <h2 class="top-chores"><%= "Semaine du #{week_number} au #{week_number + 1}" %></h2>
+  <% weekly_chores.each do |chore_per_user| %>
+  <div class="chore">
+    <p class="chorename"> <%= "#{chore_per_user.task.title} - #{chore_per_user.task.room}" %> </p>
+    <% if chore_per_user.status == "uncomplete" %>
+    <p><i class="far fa-angry"></i></p>
+    <%end%>
+    <p class="chorerespo"><%= chore_per_user.user.pseudo %></p>
+    <div class="boxes">
       <% if chore_per_user.status == "pending"%>
-          <p class="greybox"><i class="far fa-circle"></i></p>
+      <p class="greybox"><i class="far fa-circle"></i></p>
       <% elsif chore_per_user.status == "done"%>
-          <p class="greybox"><i class="far fa-check-circle"></i></p>
-      <% elsif chore_per_user.status == "uncomplete"%>
-          <p class="greybox"><i class="far fa-times-circle"></i></p>
+      <p class="greybox"><i class="far fa-check-circle"></i></p>
+      <% else %>
+      <p class="greybox"><i class="far fa-times-circle"></i></p>
       <%end%>
+    </div>
+    <div class="dropleft">
+      <i class="fas fa-ellipsis-v" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <%= link_to "Non fait, mal fait", change_status_uncomplete_chore_path(chore_per_user, list: :team), method: :patch, class:' dropdown-item' %>
       </div>
-
-        <div class="dropleft">
-          <i class="fas fa-ellipsis-v" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <%= link_to "Non fait, mal fait", change_status_uncomplete_chore_path(chore_per_user, list: :team), method: :patch, class:' dropdown-item' %>
-          </div>
-        </div>
-      </div>
-  <%end%>
+    </div>
   </div>
+  <%end%>
 </div>
 <% end %>
