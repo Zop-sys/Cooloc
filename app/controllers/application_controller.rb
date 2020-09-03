@@ -9,6 +9,10 @@ class ApplicationController < ActionController::Base
   end
 
   def default_url_options
-  { host: ENV["DOMAIN"] || "localhost:3000" }
+    { host: ENV["DOMAIN"] || "localhost:3000" }
   end
 end
+
+# devise_parameter_sanitizer.for(:sign_up) do |u|
+#   u.permit(:email, :username, :password, :password_confirmation)
+# end
