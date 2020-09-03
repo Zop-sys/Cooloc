@@ -1,5 +1,4 @@
 <h1 class = "titlechores pt-5 pb-3"><%= "C'est parti chez #{current_user.team.name}!"%></h1>
-
 <div class="buttonchore mb-5">
   <p class="choreme clicked">Mes tâches</p>
   <a class="choreall noclicked"href="../team/chores">Le ménage</a>
@@ -7,13 +6,10 @@
 
 <div class="card-chores">
   <h2 class="top-chores"><%= Date.today.strftime('%B') %></h2>
-
   <% @monthly_chores.each do |monthly_chore| %>
 
     <div class="chore">
-
       <p class="chorename"><%= "#{monthly_chore.task.title} - #{monthly_chore.task.room}" %></p>
-
       <% if monthly_chore.task.intensity == 1 %>
         <%= image_tag "low_intensity", height: 30, class: "pl-3" %>
       <% elsif monthly_chore.task.intensity == 2 %>
@@ -21,71 +17,50 @@
       <% else %>
         <%= image_tag "high_intensity", height: 30, class: "pl-3" %>
       <% end %>
-
+      <div class="boxes ml-2 pl-2">
       <% if monthly_chore.status == "pending" %>
-        <div class="boxes ml-2 pl-2">
-            <%= link_to change_status_done_chore_path(monthly_chore), method: :patch do %>
-              <p class="pencilbox"><i class="far fa-circle"></i></p>
-            <% end %>
-        </div>
-
+        <%= link_to change_status_done_chore_path(monthly_chore), method: :patch do %>
+          <p class="pencilbox"><i class="far fa-circle"></i></p>
+        <% end %>
       <% elsif monthly_chore.status == "done"%>
-        <div class="boxes ml-2 pl-2">
           <%= link_to change_status_pending_chore_path(monthly_chore), method: :patch do %>
-            <p class="greenbox"><i class="far fa-check-circle"></i></p>
-          <% end %>
-        </div>
-
+          <p class="greenbox"><i class="far fa-check-circle"></i></p>
+        <% end %>
+      <%else %>
+        <p class="redbox ml-2"><i class="fas fa-exclamation"></i></p>
       <% end %>
-
+      </div>
     </div>
-
   <% end %>
-
 </div>
-
-
 
 <% @weekly_chores_by_week_number.each do |week_number, weekly_chores|  %>
-
-<div class="card-chores">
-  <h2 class="top-chores"><%= "Semaine #{week_number}" %></h2>
-
-  <% weekly_chores.each do |weekly_chore| %>
-    <div class="chore">
-
-      <p class="chorename"> <%= "#{weekly_chore.task.title} - #{weekly_chore.task.room}"%></p>
-
-
-      <% if weekly_chore.task.intensity == 1 %>
+  <div class="card-chores">
+    <h2 class="top-chores"><%= "Semaine #{week_number}" %></h2>
+    <% weekly_chores.each do |weekly_chore| %>
+      <div class="chore">
+        <p class="chorename"> <%= "#{weekly_chore.task.title} - #{weekly_chore.task.room}"%></p>
+        <% if weekly_chore.task.intensity == 1 %>
         <%= image_tag "low_intensity", height: 30, class: "pl-3" %>
-      <% elsif weekly_chore.task.intensity == 2 %>
+        <% elsif weekly_chore.task.intensity == 2 %>
         <%= image_tag "medium_intensity", height: 30, class: "pl-3" %>
-      <% else %>
+        <% else %>
         <%= image_tag "high_intensity", height: 30, class: "pl-3" %>
-      <% end %>
-
-
-      <% if weekly_chore.status == "pending" %>
-
+        <% end %>
         <div class="boxes ml-2 pl-2">
-          <%= link_to change_status_done_chore_path(weekly_chore), method: :patch do %>
+          <% if weekly_chore.status == "pending" %>
+            <%= link_to change_status_done_chore_path(weekly_chore), method: :patch do %>
             <p class="pencilbox"><i class="far fa-circle"></i></p>
-          <% end %>
-        </div>
-
-      <% elsif weekly_chore.status == "done" %>
-
-        <div class="boxes ml-2 pl-2">
-          <%= link_to change_status_pending_chore_path(weekly_chore), method: :patch do %>
+            <% end %>
+          <% elsif weekly_chore.status == "done" %>
+            <%= link_to change_status_pending_chore_path(weekly_chore), method: :patch do %>
             <p class="greenbox"><i class="far fa-check-circle"></i></p>
-          <% end %>
+            <% end %>
+          <% else %>
+            <p class="redbox ml-2"><i class="fas fa-exclamation"></i></p>
+          <%end%>
         </div>
-
-      <% end %>
-
-    </div>
-  <% end %>
-</div>
-
+      </div>
+    <% end %>
+  </div>
 <% end %>
