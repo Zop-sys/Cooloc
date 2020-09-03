@@ -14,7 +14,8 @@
           <%= image_tag "open-menu.png", width: 30, class: "dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <p class = "dropdown-item"> <%= current_user.pseudo %> </p>
-            <%#= link_to "Mes tâches", chores_path, class: "dropdown-item" %>
+            <%= link_to "Mes tâches", chores_path, class: "dropdown-item" %>
+            <%= link_to "Classement", team_teams_path, class: "dropdown-item" %>
             <%#= link_to "Choisir les tâches",  new_team_task_path, class: "dropdown-item" %>
             <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
