@@ -6,8 +6,9 @@ class ChoresController < ApplicationController
                                                 .for_planning.includes(:task)
                                                 .order(:created_at)
     @monthly_chores               = @chores.where(tasks: { frequency: 'monthly' })
+                                           .order(:id)
     @weekly_chores_by_week_number = @chores.where(tasks: { frequency: 'weekly' })
-                                           .order(:week_number, :id, :created_at)
+                                           .order(:week_number, :id)
                                            .group_by(&:week_number)
 
   end

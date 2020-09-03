@@ -115,7 +115,22 @@
   font-size: 30px;
 }
 
+.greybox {
+  color: $grey;
+  font-size: 30px;
+}
+
 // si selection
 .selected {
   background-color: $grey-light;
 }
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+
+.icon-collapse {
+  flex-grow: 0;
+}
+
