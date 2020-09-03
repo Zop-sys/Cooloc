@@ -1,4 +1,6 @@
 class ChoresController < ApplicationController
+  before_action :set_chore, only: [:change_status_done, :change_status_uncomplete, :change_status_pending]
+
   def index
     @chores                       = current_user.chores
                                                 .for_planning.includes(:task)
@@ -10,23 +12,27 @@ class ChoresController < ApplicationController
   end
 
   def change_status_done
-    @chore = Chore.find(params[:id])
-    @chore.status = "done"
-    @chore.save
-    redirect_to chores_path
+    @chore.update(status: "done")
+    redirect_to_chores_list
   end
 
   def change_status_uncomplete
-    @chore = Chore.find(params[:id])
-    @chore.status = "uncomplete"
-    @chore.save
-    redirect_to chores_path
+    @chore.update(status: "uncomplete")
+    redirect_to_chores_list
   end
 
   def change_status_pending
+    @chore.update(status: "pending")
+    redirect_to_chores_list
+  end
+
+  private
+
+  def set_chore
     @chore = Chore.find(params[:id])
-    @chore.status = "pending"
-    @chore.save
-    redirect_to chores_path
+  end
+
+  def redirect_to_chores_list
+    redirect_to params[:list] == 'team' ? team_chores_path : chores_path
   end
 end
