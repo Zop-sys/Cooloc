@@ -1,7 +1,7 @@
 <h2 class="title mt-5 pt-3"> Le classement  <%= image_tag "podium.png", height: 50 %> </h2>
 <p class="text-center best-text mb-3"> Le coin des meilleurs! </p>
 <div class="card card-main-classement d-flex flex-column align-items-around justify-content-around">
-  <% @users.first(3).each_with_index do |user, index| %>
+  <% @classement.first(3).each_with_index do |user, index| %>
     <div class="border classement-card m-2 mt-4 pl-2 d-flex align-items-center justify-content-between pl-3 pr-3 classement-user">
         <% if index == 0 %>
           <%= image_tag "goldmedal.png", class: "medal" %> <p class="pr-3"> <%= user.pseudo %> </p> <p class="pr-3"> <%= user.point %> </p>
