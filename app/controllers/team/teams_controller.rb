@@ -15,6 +15,3 @@ class Team::TeamsController < ApplicationController
     @users.order(:point)
   end
 end
-
-# Classement
-# On attribue des points à chaque user :
