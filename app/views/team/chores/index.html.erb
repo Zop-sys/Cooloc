@@ -56,14 +56,12 @@
         <div class="boxes">
       <% if chore_per_user.status == "pending"%>
           <p class="greybox"><i class="far fa-circle"></i></p>
-        </div>
       <% elsif chore_per_user.status == "done"%>
           <p class="greybox"><i class="far fa-check-circle"></i></p>
-        </div>
       <% elsif chore_per_user.status == "uncomplete"%>
           <p class="greybox"><i class="far fa-times-circle"></i></p>
-        </div>
       <%end%>
+      </div>
 
         <div class="dropleft">
           <i class="fas fa-ellipsis-v" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
