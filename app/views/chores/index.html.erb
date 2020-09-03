@@ -7,7 +7,7 @@
 <p class= "inputteam blue text-center explain mine"> Coche les tâches que tu as réalisé </p>
 
 <div class="card-chores">
-  <h2 class="top-chores">Durant le mois de <%="#{Date.today.strftime('%B')}"%></h2>
+  <h2 class="top-chores">Durant le mois de <%= l(Date.today, format: '%B') %></h2>
   <% @monthly_chores.each do |monthly_chore| %>
 
     <div class="chore">
@@ -38,7 +38,7 @@
 
 <% @weekly_chores_by_week_number.each do |week_number, weekly_chores|  %>
   <div class="card-chores">
-    <h2 class="top-chores"><%= "Semaine du #{Date.commercial(Time.current.year, week_number)}" %></h2>
+    <h2 class="top-chores"><%= "Semaine du #{l(Date.commercial(Time.current.year, week_number), format: '%d %B')}" %></h2>
     <% weekly_chores.each do |weekly_chore| %>
       <div class="chore">
         <p class="chorename"> <%= "#{weekly_chore.task.title} - #{weekly_chore.task.room}"%></p>
