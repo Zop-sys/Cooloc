@@ -8,9 +8,6 @@
   <% @team_monthly_chores.each do |monthly_chore| %>
   <div class="chore">
     <p class="chorename"> <%= "#{monthly_chore.task.title} - #{monthly_chore.task.room}" %> </p>
-    <% if monthly_chore.status == "uncomplete" %>
-    <p><i class="far fa-angry"></i></p>
-    <%end%>
     <p class="chorerespo"><%= monthly_chore.user.pseudo%></p>
     <div class="boxes">
       <% if monthly_chore.status == "pending"%>
@@ -18,7 +15,7 @@
       <% elsif monthly_chore.status == "done"%>
       <p class="greybox"><i class="far fa-check-circle"></i></p>
       <% else %>
-      <p class="greybox"><i class="far fa-times-circle"></i></p>
+      <p class="redbox ml-2"><i class="fas fa-exclamation"></i></p>
       <%end%>
     </div>
     <div class="dropleft">
@@ -36,9 +33,6 @@
   <% weekly_chores.each do |chore_per_user| %>
   <div class="chore">
     <p class="chorename"> <%= "#{chore_per_user.task.title} - #{chore_per_user.task.room}" %> </p>
-    <% if chore_per_user.status == "uncomplete" %>
-    <p><i class="far fa-angry"></i></p>
-    <%end%>
     <p class="chorerespo"><%= chore_per_user.user.pseudo %></p>
     <div class="boxes">
       <% if chore_per_user.status == "pending"%>
@@ -46,9 +40,9 @@
       <% elsif chore_per_user.status == "done"%>
       <p class="greybox"><i class="far fa-check-circle"></i></p>
       <% else %>
-      <p class="greybox"><i class="far fa-times-circle"></i></p>
-      <%end%>
+      <p class="redbox ml-2"><i class="fas fa-exclamation"></i></p>
     </div>
+    <%end%>
     <div class="dropleft">
       <i class="fas fa-ellipsis-v" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
