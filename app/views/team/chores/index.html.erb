@@ -6,9 +6,9 @@
 </div>
 
 
-  <div class="card-chores">
-    <h2 class="top-chores"><%= Date.today.strftime('%B') %></h2>
-<% @team_monthly_chores.each do |monthly_chore| %>
+<div class="card-chores">
+  <h2 class="top-chores"><%= Date.today.strftime('%B') %></h2>
+  <% @team_monthly_chores.each do |monthly_chore| %>
 
     <div class="chore">
       <p class="chorename"> <%= "#{monthly_chore.task.title} - #{monthly_chore.task.room}" %> </p>
@@ -21,26 +21,26 @@
           <% end %>
         </div>
 
-        <% elsif monthly_chore.status == "done" %>
-          <div class="boxes">
-            <%= link_to change_status_pending_chore_path(monthly_chore, list: :team), method: :patch do %>
-              <p class="pencilbox"><i class="far fa-circle"></i></p>
-            <% end %>
-          </div>
-
-        <% elsif monthly_chore.status == "uncomplete" %>
-          <div class="boxes">
-            <%= link_to change_uncomplete_chore_path(monthly_chore, list: :team), method: :patch do %>
-              <p class="redbox"><i class="far fa-times-circle"></i></p>
-            <% end %>
-          </div>
+      <% elsif monthly_chore.status == "done" %>
+        <div class="boxes">
+          <%= link_to change_status_pending_chore_path(monthly_chore, list: :team), method: :patch do %>
+            <p class="pencilbox"><i class="far fa-circle"></i></p>
+          <% end %>
         </div>
+
+      <% elsif monthly_chore.status == "uncomplete" %>
+        <div class="boxes">
+          <%= link_to change_uncomplete_chore_path(monthly_chore, list: :team), method: :patch do %>
+            <p class="redbox"><i class="far fa-times-circle"></i></p>
+          <% end %>
+        </div>
+
       <%end%>
 
     </div>
-  </div>
-<%end%>
 
+  <%end%>
+</div>
 
 <% @team_weekly_chores_by_week_number.each do |weekly_chore|  %>
   <div class="card-chores">
