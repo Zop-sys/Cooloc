@@ -1,6 +1,6 @@
 <h1 class = "titlechores pt-5 pb-3"><%= "C'est parti chez #{current_user.team.name}!"%></h1>
 
-<div class="buttonchore mb-4">
+<div class="buttonchore mb-5">
   <p class="choreme clicked">Mes tâches</p>
   <a class="choreall noclicked"href="../team/chores">Le ménage</a>
 </div>
@@ -13,17 +13,24 @@
     <div class="chore">
 
       <p class="chorename"><%= "#{monthly_chore.task.title} - #{monthly_chore.task.room}" %></p>
-      <%= image_tag "" %>
+
+      <% if monthly_chore.task.intensity == 1 %>
+        <%= image_tag "low_intensity", height: 30, class: "pl-3" %>
+      <% elsif monthly_chore.task.intensity == 2 %>
+        <%= image_tag "medium_intensity", height: 30, class: "pl-3" %>
+      <% else %>
+        <%= image_tag "high_intensity", height: 30, class: "pl-3" %>
+      <% end %>
 
       <% if monthly_chore.status == "pending" %>
-        <div class="boxes">
+        <div class="boxes ml-2 pl-2">
             <%= link_to change_status_done_chore_path(monthly_chore), method: :patch do %>
               <p class="pencilbox"><i class="far fa-circle"></i></p>
             <% end %>
         </div>
 
       <% elsif monthly_chore.status == "done"%>
-        <div class="boxes">
+        <div class="boxes ml-2 pl-2">
           <%= link_to change_status_pending_chore_path(monthly_chore), method: :patch do %>
             <p class="greenbox"><i class="far fa-check-circle"></i></p>
           <% end %>
@@ -33,7 +40,7 @@
 
     </div>
 
-  <%end%>
+  <% end %>
 
 </div>
 
@@ -49,9 +56,19 @@
 
       <p class="chorename"> <%= "#{weekly_chore.task.title} - #{weekly_chore.task.room}"%></p>
 
+
+      <% if weekly_chore.task.intensity == 1 %>
+        <%= image_tag "low_intensity", height: 30, class: "pl-3" %>
+      <% elsif weekly_chore.task.intensity == 2 %>
+        <%= image_tag "medium_intensity", height: 30, class: "pl-3" %>
+      <% else %>
+        <%= image_tag "high_intensity", height: 30, class: "pl-3" %>
+      <% end %>
+
+
       <% if weekly_chore.status == "pending" %>
 
-        <div class="boxes ">
+        <div class="boxes ml-2 pl-2">
           <%= link_to change_status_done_chore_path(weekly_chore), method: :patch do %>
             <p class="pencilbox"><i class="far fa-circle"></i></p>
           <% end %>
@@ -59,7 +76,7 @@
 
       <% elsif weekly_chore.status == "done" %>
 
-        <div class="boxes">
+        <div class="boxes ml-2 pl-2">
           <%= link_to change_status_pending_chore_path(weekly_chore), method: :patch do %>
             <p class="greenbox"><i class="far fa-check-circle"></i></p>
           <% end %>
