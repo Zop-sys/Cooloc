@@ -14,24 +14,24 @@
       <p class="chorename"> <%= "#{monthly_chore.task.title} - #{monthly_chore.task.room}" %> </p>
       <p class="chorerespo"><%= monthly_chore.user.pseudo%></p>
 
-      <% if monthly_chore.status == "pending" %>
+      <% if monthly_chore.status == "done" %>
         <div class="boxes">
-          <%= link_to change_status_done_chore_path(monthly_chore, list: :team), method: :patch do %>
-            <p class="greenbox"><i class="far fa-check-circle"></i></p>
+          <%= link_to change_status_uncomplete_chore_path(monthly_chore, list: :team), method: :patch do %>
+            <p class="redbox"><i class="far fa-times-circle"></i></p>
           <% end %>
         </div>
 
-      <% elsif monthly_chore.status == "done" %>
+      <% elsif monthly_chore.status == "pending" %>
         <div class="boxes">
-          <%= link_to change_status_pending_chore_path(monthly_chore, list: :team), method: :patch do %>
-            <p class="pencilbox"><i class="far fa-circle"></i></p>
+          <%= link_to change_status_uncomplete_chore_path(monthly_chore, list: :team), method: :patch do %>
+            <p class="redbox"><i class="far fa-times-circle"></i></p>
           <% end %>
         </div>
 
       <% elsif monthly_chore.status == "uncomplete" %>
         <div class="boxes">
-          <%= link_to change_uncomplete_chore_path(monthly_chore, list: :team), method: :patch do %>
-            <p class="redbox"><i class="far fa-times-circle"></i></p>
+          <%= link_to change_status_done_chore_path(monthly_chore, list: :team), method: :patch do %>
+            <p class="greenbox"><i class="far fa-check-circle"></i></p>
           <% end %>
         </div>
 
