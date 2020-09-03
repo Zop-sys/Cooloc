@@ -1,8 +1,31 @@
 <h2 class="title mt-5 mb-3"> Le classement </h2>
 
-
 <div class="card card-main-classement d-flex flex-column align-items-around justify-content-around">
-  <div class="border classement-card m-2 mt-3 pl-2 d-flex align-items-center"> <%= "1° ..."  %> </div>
-  <div class="border classement-card m-2 pl-2 d-flex align-items-center"> <%= "2° ..."  %> </div>
-  <div class="border classement-card m-2 mb-3 pl-2 d-flex align-items-center"> <%= "3° ..."  %> </div>
+  <div class="border classement-card m-2 mt-3 pl-2 d-flex align-items-center justify-content-between pl-3 pr-3 mb-3 info-classement"> <p> <%= "Position" %> </p> <p><%= "Pseudo" %></p>  <p><%= "Points" %></p>
+  </div>
+  <% @users.each_with_index do |user, index| %>
+    <div class="border classement-card m-2 mt-3 pl-2 d-flex align-items-center justify-content-between pl-3 pr-3 classement-user"> <p>
+      <% if %>
+        <% index + 1 == 1 %>
+        <%= image_tag "goldmedal.png", class: "medal" %>
+        <% elsif %>
+        <% index + 1 == 2 %>
+        <%= image_tag "silvermedal.png", class: "medal"%>
+        <% elsif %>
+        <% index + 1 == 3 %>
+        <%= image_tag "bronzemedal.png", class: "medal"%>
+        <% else %>
+        <%= index + 1 %>
+        <% end %>
+<p class="pr-3"> <%= user.pseudo%> </p>  <p class= "pr-3"> <%= user.point %> </p>
+    </div>
+  <%end%>
 </div>
+
+<div class="d-flex align-items-center justify-content-center">
+    <%= image_tag "champion.png", class: "champion mt-5" %>
+</div>
+
+
+
+

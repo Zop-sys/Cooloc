@@ -39,6 +39,11 @@
 .noclicked {
   color: white;
   width: 40%;
+  &:hover {
+    text-decoration: none;
+    color: $red;
+    transition: color 0.5s;
+  }
 }
 
 .choreall {
@@ -57,6 +62,7 @@
   margin: 20px 0px 20px 0px;
   height: auto;
   width: auto;
+  margin: 30px 0;
 }
 
 .top-chores {
@@ -68,10 +74,11 @@
   font-family: $general-font;
 }
 
-.chore{
+.chore {
   display:flex;
   align-items: center;
-  padding: 15px;
+  justify-content: space-around;
+  padding: 15px 5px 15px 15px;
 
   p {
     margin-bottom: 0;
@@ -115,7 +122,22 @@
   font-size: 30px;
 }
 
+.greybox {
+  color: $grey;
+  font-size: 30px;
+}
+
 // si selection
 .selected {
   background-color: $grey-light;
 }
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+
+.icon-collapse {
+  flex-grow: 0;
+}
+

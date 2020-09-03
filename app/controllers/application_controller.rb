@@ -13,3 +13,7 @@ class ApplicationController < ActionController::Base
     { host: ENV["DOMAIN"] || "localhost:3000" }
   end
 end
+
+# devise_parameter_sanitizer.for(:sign_up) do |u|
+#   u.permit(:email, :username, :password, :password_confirmation)
+# end
