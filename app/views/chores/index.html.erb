@@ -3,32 +3,33 @@
   <p class="choreme clicked">Mes tâches</p>
   <a class="choreall noclicked"href="../team/chores">Le ménage</a>
 </div>
+
 <div class="card-chores">
   <h2 class="top-chores"><%= Date.today.strftime('%B') %></h2>
   <% @monthly_chores.each do |monthly_chore| %>
-  <div class="chore">
-    <p class="chorename"><%= "#{monthly_chore.task.title} - #{monthly_chore.task.room}" %></p>
-    <% if monthly_chore.task.intensity == 1 %>
-    <%= image_tag "low_intensity", height: 30, class: "pl-3" %>
-    <% elsif monthly_chore.task.intensity == 2 %>
-    <%= image_tag "medium_intensity", height: 30, class: "pl-3" %>
-    <% else %>
-    <%= image_tag "high_intensity", height: 30, class: "pl-3" %>
-    <% end %>
-    <% if monthly_chore.status == "pending" %>
-    <div class="boxes ml-2 pl-2">
-      <%= link_to change_status_done_chore_path(monthly_chore), method: :patch do %>
-      <p class="pencilbox"><i class="far fa-circle"></i></p>
+
+    <div class="chore">
+      <p class="chorename"><%= "#{monthly_chore.task.title} - #{monthly_chore.task.room}" %></p>
+      <% if monthly_chore.task.intensity == 1 %>
+        <%= image_tag "low_intensity", height: 30, class: "pl-3" %>
+      <% elsif monthly_chore.task.intensity == 2 %>
+        <%= image_tag "medium_intensity", height: 30, class: "pl-3" %>
+      <% else %>
+        <%= image_tag "high_intensity", height: 30, class: "pl-3" %>
       <% end %>
-    </div>
-    <% elsif monthly_chore.status == "done"%>
-    <div class="boxes ml-2 pl-2">
-      <%= link_to change_status_pending_chore_path(monthly_chore), method: :patch do %>
-      <p class="greenbox"><i class="far fa-check-circle"></i></p>
+      <div class="boxes ml-2 pl-2">
+      <% if monthly_chore.status == "pending" %>
+        <%= link_to change_status_done_chore_path(monthly_chore), method: :patch do %>
+          <p class="pencilbox"><i class="far fa-circle"></i></p>
+        <% end %>
+      <% elsif monthly_chore.status == "done"%>
+          <%= link_to change_status_pending_chore_path(monthly_chore), method: :patch do %>
+          <p class="greenbox"><i class="far fa-check-circle"></i></p>
+        <% end %>
       <% end %>
+      </div>
     </div>
-    <% end %>
-  </div>
+
   <% end %>
 </div>
 
