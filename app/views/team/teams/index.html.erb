@@ -2,6 +2,7 @@
 
 
 <div class="card card-main-classement d-flex flex-column align-items-around justify-content-around">
-  <% @users.each_with_index do |user, index| %>
+  <% @users
+.each_with_index do |user, index| %>
   <div class="border classement-card m-2 mt-3 pl-2 d-flex align-items-center"> <%= index + 1%> <%= user.pseudo  %> <%= user.point %> </div>
 <%end%>

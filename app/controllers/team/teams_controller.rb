@@ -12,6 +12,7 @@ class Team::TeamsController < ApplicationController
         end
       end
     end
+    @users.order(:point)
   end
 end
 
