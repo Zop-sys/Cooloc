@@ -5,7 +5,7 @@
 </div>
 
 <div class="card-chores">
-  <h2 class="top-chores"><%= "Les tâches du mois" %></h2>
+  <h2 class="top-chores">Durant le mois de <%="#{Date.today.strftime('%B')}"%></h2>
   <% @team_monthly_chores.each do |monthly_chore| %>
     <div class="chore">
       <p class="chorename"> <%= "#{monthly_chore.task.title} - #{monthly_chore.task.room}" %> </p>
@@ -33,7 +33,7 @@
 
 <% @team_weekly_chores_by_week_number.each do |week_number, weekly_chores| %>
   <div class="card-chores">
-    <h2 class="top-chores"><%= "Semaine du #{week_number} au #{week_number + 1}" %></h2>
+    <h2 class="top-chores"><%= "Semaine du #{Date.commercial(Time.current.year, week_number)}" %></h2>
     <% weekly_chores.each do |chore_per_user| %>
       <div class="chore">
         <p class="chorename"> <%= "#{chore_per_user.task.title} - #{chore_per_user.task.room}" %> </p>

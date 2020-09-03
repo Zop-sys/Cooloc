@@ -1,11 +1,11 @@
 <h1 class = "titlechores pt-5 pb-3"><%= "C'est parti chez #{current_user.team.name}!"%></h1>
 <div class="buttonchore mb-5">
   <p class="choreme clicked">Mes tâches</p>
-  <a class="choreall noclicked"href="../team/chores">Le ménage</a>
+  <a class="choreall noclicked"href="../team/chores">Les tâches de la coloc</a>
 </div>
 
 <div class="card-chores">
-  <h2 class="top-chores"><%= Date.today.strftime('%B') %></h2>
+  <h2 class="top-chores">Durant le mois de <%="#{Date.today.strftime('%B')}"%></h2>
   <% @monthly_chores.each do |monthly_chore| %>
 
     <div class="chore">
@@ -36,7 +36,7 @@
 
 <% @weekly_chores_by_week_number.each do |week_number, weekly_chores|  %>
   <div class="card-chores">
-    <h2 class="top-chores"><%= "Semaine #{week_number}" %></h2>
+    <h2 class="top-chores"><%= "Semaine du #{Date.commercial(Time.current.year, week_number)}" %></h2>
     <% weekly_chores.each do |weekly_chore| %>
       <div class="chore">
         <p class="chorename"> <%= "#{weekly_chore.task.title} - #{weekly_chore.task.room}"%></p>
