@@ -32,13 +32,13 @@
 .clicked {
   background-color: $yellow-input ;
   border-radius: 8px 8px 8px 8px;
-  width: 60%;
+  width: 50%;
   box-shadow: 0 0 15px $grey-light;
 }
 
 .noclicked {
   color: white;
-  width: 40%;
+  width: 50%;
   &:hover {
     text-decoration: none;
     color: $red;
@@ -70,7 +70,7 @@
   border-radius: 8px 0px 8px 0px;
   padding: 5px 10px 5px 10px;
   font-size: 18px;
-  width: 30%;
+  width: 60%;
   font-family: $general-font;
 }
 
@@ -140,4 +140,3 @@
 .icon-collapse {
   flex-grow: 0;
 }
-
