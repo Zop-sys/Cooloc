@@ -22,8 +22,8 @@ puts "Creating tasks.."
 # repas_midi = Task.create!(title:"Faire les repas du midi", intensity: 3, room: "Cuisine", frequency:"weekly")
 # repas_soir = Task.create!(title:"Faire les repas du soir", intensity: 3, room: "Cuisine", frequency:"weekly")
 # courses = Task.create!(title:"Faire les courses", intensity: 3, room: "Cuisine", frequency:"weekly")
-aspirateur_cuisine = Task.create!(title:"Passer l'aspirateur", intensity: 2, room: "Cuisine", frequency:"weekly")
-lavage_cuisine = Task.create!(title:"Passer la serpillère", intensity: 3, room: "Cuisine", frequency:"monthly")
+aspirateur_cuisine = Task.create!(title:"Passer l'aspirateur", intensity: 1, room: "Cuisine", frequency:"weekly")
+lavage_cuisine = Task.create!(title:"Passer la serpillère", intensity: 2, room: "Cuisine", frequency:"monthly")
 vaisselle = Task.create!(title:"Faire la vaisselle à la main", intensity: 3, room: "Cuisine", frequency:"weekly")
 lave_vaisselle = Task.create!(title:"Gérer le lave vaisselle", intensity: 1, room: "Cuisine", frequency:"weekly")
 evier = Task.create!(title:"Nettoyer l'évier et la table", intensity: 2, room: "Cuisine", frequency:"weekly")
@@ -31,26 +31,26 @@ puts "Tasks cuisine finished!"
 
 
 # tasks salon
-aspirateur_salon = Task.create!(title:"Passer l'aspirateur", intensity: 2, room: "Salon", frequency:"weekly")
+aspirateur_salon = Task.create!(title:"Passer l'aspirateur", intensity: 1, room: "Salon", frequency:"weekly")
 lavage_salon = Task.create!(title:"Passer la serpillère", intensity: 3, room: "Salon", frequency:"monthly")
-poussiere = Task.create!(title:"Faire la poussière", intensity: 2, room: "Salon", frequency:"weekly")
-ranger = Task.create!(title:"Ranger les affaires", intensity: 1, room: "Salon", frequency:"monthly")
+poussiere = Task.create!(title:"Faire la poussière", intensity: 2, room: "Salon", frequency:"monthly")
+ranger = Task.create!(title:"Ranger les affaires", intensity: 1, room: "Salon", frequency:"weekly")
 puts "Tasks salon finished!"
 
 
 # tasks salle de bain
 aspirateur_bain = Task.create!(title:"Passer l'aspirateur", intensity: 2, room: "Salle de Bain", frequency:"weekly")
 lavage_bain = Task.create!(title:"Passer la serpillère", intensity: 3, room: "Salle de Bain", frequency:"monthly")
-nettoyage_bain = Task.create!(title:"Nettoyer la douche", intensity: 3, room: "Salle de Bain", frequency:"monthly")
-nettoyage_lavabo = Task.create!(title:"Nettoyer le lavabo", intensity: 3, room: "Salle de Bain", frequency:"weekly")
+nettoyage_bain = Task.create!(title:"Nettoyer la douche", intensity: 2, room: "Salle de Bain", frequency:"monthly")
+nettoyage_lavabo = Task.create!(title:"Nettoyer le lavabo", intensity: 1, room: "Salle de Bain", frequency:"weekly")
 puts "Tasks salle de bain finished!"
 
 
 # tasks toilettes
-aspirateur_toilettes = Task.create!(title:"Passer l'aspirateur", intensity: 2, room: "Toilette", frequency:"weekly")
-lavage_toilettes = Task.create!(title:"Passer la serpillère", intensity: 3, room: "Toilette", frequency:"monthly")
+aspirateur_toilettes = Task.create!(title:"Passer l'aspirateur", intensity: 1, room: "Toilette", frequency:"weekly")
+lavage_toilettes = Task.create!(title:"Passer la serpillère", intensity: 2, room: "Toilette", frequency:"monthly")
 nettoyage_toilettes = Task.create!(title:"Nettoyer les WC", intensity: 3, room: "Toilette", frequency:"monthly")
-remettre_papier = Task.create!(title:"Remettre du papier", intensity: 2, room: "Toilette", frequency:"weekly")
+remettre_papier = Task.create!(title:"Remettre du papier", intensity: 1, room: "Toilette", frequency:"weekly")
 
 puts "Tasks toilettes finished!"
 
