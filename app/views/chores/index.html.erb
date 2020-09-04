@@ -21,11 +21,11 @@
       <% end %>
       <div class="boxes ml-2 pl-2">
       <% if monthly_chore.status == "pending" %>
-        <%= link_to change_status_done_chore_path(monthly_chore), method: :patch, remote: true do %>
+        <%= link_to change_status_done_chore_path(monthly_chore), method: :patch, remote: true, data: { "turbolinks-scroll" => false } do %>
           <p class="pencilbox"><i class="far fa-circle"></i></p>
         <% end %>
       <% elsif monthly_chore.status == "done"%>
-          <%= link_to change_status_pending_chore_path(monthly_chore), method: :patch, remote: true do %>
+          <%= link_to change_status_pending_chore_path(monthly_chore), method: :patch, remote: true, data: { "turbolinks-scroll" => false } do %>
           <p class="greenbox"><i class="far fa-check-circle"></i></p>
         <% end %>
       <% else %>
@@ -51,11 +51,11 @@
         <% end %>
         <div class="boxes ml-2 pl-2">
           <% if weekly_chore.status == "pending" %>
-            <%= link_to change_status_done_chore_path(weekly_chore), method: :patch, remote: true do %>
+            <%= link_to change_status_done_chore_path(weekly_chore), method: :patch, remote: true, data: { "turbolinks-scroll" => false } do %>
             <p class="pencilbox"><i class="far fa-circle"></i></p>
             <% end %>
           <% elsif weekly_chore.status == "done" %>
-            <%= link_to change_status_pending_chore_path(weekly_chore), method: :patch, remote: true do %>
+            <%= link_to change_status_pending_chore_path(weekly_chore), method: :patch, remote: true, data: { "turbolinks-scroll" => false } do %>
             <p class="greenbox"><i class="far fa-check-circle"></i></p>
             <% end %>
           <% else %>
