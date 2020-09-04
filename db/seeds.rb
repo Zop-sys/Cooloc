@@ -79,6 +79,9 @@ puts "Creatings teams ..."
 team = Team.create!(name: "Les coolocs créatifs !")
 puts "Created #{team.name}"
 
+team = Team.create!(name: "DreamTeam")
+puts "Created #{team.name}"
+
 puts "All teams created"
 
 # users
@@ -107,6 +110,27 @@ user = User.new(pseudo: "Julien", email:"julien@mail.com", password: "password")
 user.team = Team.where(name: "Les coolocs créatifs !").first
 user.save!
 puts "Created #{user.pseudo}"
+
+user = User.new(pseudo: "Tom", email:"tommie@gmail.com", password: "password")
+user.team = Team.where(name: "DreamTeam").first
+user.save!
+puts "Created #{user.pseudo}"
+
+user = User.new(pseudo: "Zo", email:"zoe@gmail.com", password: "password")
+user.team = Team.where(name: "DreamTeam").first
+user.save!
+puts "Created #{user.pseudo}"
+
+user = User.new(pseudo: "Yoyo", email:"yohann@gmail.com", password: "password")
+user.team = Team.where(name: "DreamTeam").first
+user.save!
+puts "Created #{user.pseudo}"
+
+user = User.new(pseudo: "Zaza", email:"isabelle@gmail.com", password: "password")
+user.team = Team.where(name: "DreamTeam").first
+user.save!
+puts "Created #{user.pseudo}"
+
 
 
 puts "All users created"
