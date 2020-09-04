@@ -24,6 +24,7 @@
     </div>
     <div class="container d-flex align-items-end justify-content-around mt-4">
       <%= image_tag "lamp.png", height: 70 %>
-      <%= f.button :submit, "Ajoute ta coloc", class: "button btn-validate" %>
+      <%= link_to "[FAKE] Ajoute ta coloc", new_team_task_path, class: 'button btn-validate'  %>
+      <%# f.button :submit, "Ajoute ta coloc", class: "button btn-validate" %>
     </div>
   <% end %>
