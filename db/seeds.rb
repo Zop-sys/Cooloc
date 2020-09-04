@@ -66,7 +66,7 @@ puts "Tasks extérieur creation finished!"
 maintenance = Task.create!(title:"Faire le petit entretien", intensity: 2, room: "Autres", frequency:"monthly")
 chat = Task.create!(title:"S'occuper des animaux", intensity: 2, room: "Autres", frequency:"weekly")
 garage = Task.create!(title:"Vider le verre", intensity: 3, room: "Autres", frequency:"weekly")
-laver_vitres = Task.create!(title:"Faires les vitres", intensity: 1, room: "Autres", frequency:"monthly")
+laver_vitres = Task.create!(title:"Faire les vitres", intensity: 1, room: "Autres", frequency:"monthly")
 puts "Tasks autres pièces creation finished!"
 
 puts "All tasks created"
