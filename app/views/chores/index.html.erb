@@ -29,7 +29,9 @@
           <p class="greenbox"><i class="far fa-check-circle"></i></p>
         <% end %>
       <% else %>
-        <p class="redbox ml-2"><i class="fas fa-exclamation"></i></p>
+        <%= link_to change_status_done_chore_path(monthly_chore), method: :patch, remote: true, data: { "turbolinks-scroll" => false } do %>
+          <p class="redbox ml-2"><i class="fas fa-exclamation"></i></p>
+        <% end %>
       <% end %>
       </div>
     </div>
@@ -59,7 +61,9 @@
             <p class="greenbox"><i class="far fa-check-circle"></i></p>
             <% end %>
           <% else %>
-            <p class="redbox ml-2"><i class="fas fa-exclamation"></i></p>
+            <%= link_to change_status_done_chore_path(weekly_chore), method: :patch, remote: true, data: { "turbolinks-scroll" => false } do %>
+              <p class="redbox ml-2"><i class="fas fa-exclamation"></i></p>
+            <% end %>
           <% end %>
         </div>
       </div>
