@@ -32,6 +32,34 @@ import "bootstrap";
 import { initAddRoomateEmailInput } from '../plugins/teams/new';
 import { flip } from '../components/_form'
 
+
+Turbolinks.scroll = {};
+
+document.addEventListener("turbolinks:load", ()=> {
+
+  const elements = document.querySelectorAll("[data-turbolinks-scroll]");
+
+  elements.forEach(function(element){
+
+    element.addEventListener("click", ()=> {
+      Turbolinks.scroll['top'] = document.scrollingElement.scrollTop;
+    });
+
+    element.addEventListener("submit", ()=> {
+      Turbolinks.scroll['top'] = document.scrollingElement.scrollTop;
+    });
+
+  });
+
+  if (Turbolinks.scroll['top']) {
+    document.scrollingElement.scrollTo(0, Turbolinks.scroll['top']);
+  }
+
+  Turbolinks.scroll = {};
+});
+
+
+
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();

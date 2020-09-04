@@ -25,7 +25,7 @@
       <div class="dropleft">
         <i class="fas fa-ellipsis-v" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <%= link_to "Mal fait", change_status_uncomplete_chore_path(monthly_chore, list: :team), method: :patch, class: "dropdown-item" %>
+          <%= link_to "Mal fait", change_status_uncomplete_chore_path(monthly_chore, list: :team), class: "dropdown-item", method: :patch, remote: true, data: { "turbolinks-scroll" => false } %>
         </div>
       </div>
     </div>
@@ -54,7 +54,7 @@
         <div class="dropleft">
           <i class="fas fa-ellipsis-v" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <%= link_to "Non fait, mal fait", change_status_uncomplete_chore_path(chore_per_user, list: :team), method: :patch, class: "dropdown-item" %>
+            <%= link_to "Non fait, mal fait", change_status_uncomplete_chore_path(chore_per_user, list: :team), method: :patch, class: "dropdown-item", remote: true, data: { "turbolinks-scroll" => false } %>
           </div>
         </div>
       </div>
