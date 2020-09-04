@@ -35,6 +35,7 @@ class ChoresController < ApplicationController
   end
 
   def redirect_to_chores_list
-    redirect_to params[:list] == 'team' ? team_chores_path : chores_path
+    chore_dom_id = "chore-#{@chore.id}"
+    redirect_to params[:list] == 'team' ? team_chores_path(anchor: chore_dom_id) : chores_path(anchor: chore_dom_id)
   end
 end

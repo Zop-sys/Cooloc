@@ -37,4 +37,14 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   initAddRoomateEmailInput();
   flip();
+/*
+  if(window.location.hash){
+    // console.log(window.location.hash.slice(1))
+    let tags = document.querySelectorAll(window.location.hash)
+    // console.log(tags)
+    if(tags.length > 0) {
+      // console.log('scrolling')
+      tags[0].scrollIntoView(true);
+    }
+  } */
 });

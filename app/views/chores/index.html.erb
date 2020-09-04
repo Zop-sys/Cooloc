@@ -10,7 +10,7 @@
   <h2 class="top-chores">Durant le mois de <%= l(Date.today, format: '%B') %></h2>
   <% @monthly_chores.each do |monthly_chore| %>
 
-    <div class="chore">
+    <div id="chore-<%= monthly_chore.id %>" class="chore">
       <p class="chorename"><%= "#{monthly_chore.task.title} - #{monthly_chore.task.room}" %></p>
       <% if monthly_chore.task.intensity == 1 %>
         <%= image_tag "low_intensity.png", height: 35, class: "pl-3" %>
@@ -21,11 +21,11 @@
       <% end %>
       <div class="boxes ml-2 pl-2">
       <% if monthly_chore.status == "pending" %>
-        <%= link_to change_status_done_chore_path(monthly_chore), method: :patch do %>
+        <%= link_to change_status_done_chore_path(monthly_chore), method: :patch, remote: true do %>
           <p class="pencilbox"><i class="far fa-circle"></i></p>
         <% end %>
       <% elsif monthly_chore.status == "done"%>
-          <%= link_to change_status_pending_chore_path(monthly_chore), method: :patch do %>
+          <%= link_to change_status_pending_chore_path(monthly_chore), method: :patch, remote: true do %>
           <p class="greenbox"><i class="far fa-check-circle"></i></p>
         <% end %>
       <% else %>
@@ -40,7 +40,7 @@
   <div class="card-chores">
     <h2 class="top-chores"><%= "Semaine du #{l(Date.commercial(Time.current.year, week_number), format: '%d %B')}" %></h2>
     <% weekly_chores.each do |weekly_chore| %>
-      <div class="chore">
+      <div id="chore-<%= weekly_chore.id %>" class="chore">
         <p class="chorename"> <%= "#{weekly_chore.task.title} - #{weekly_chore.task.room}"%></p>
         <% if weekly_chore.task.intensity == 1 %>
           <%= image_tag "low_intensity.png", height: 35, class: "pl-3" %>
@@ -51,11 +51,11 @@
         <% end %>
         <div class="boxes ml-2 pl-2">
           <% if weekly_chore.status == "pending" %>
-            <%= link_to change_status_done_chore_path(weekly_chore), method: :patch do %>
+            <%= link_to change_status_done_chore_path(weekly_chore), method: :patch, remote: true do %>
             <p class="pencilbox"><i class="far fa-circle"></i></p>
             <% end %>
           <% elsif weekly_chore.status == "done" %>
-            <%= link_to change_status_pending_chore_path(weekly_chore), method: :patch do %>
+            <%= link_to change_status_pending_chore_path(weekly_chore), method: :patch, remote: true do %>
             <p class="greenbox"><i class="far fa-check-circle"></i></p>
             <% end %>
           <% else %>
